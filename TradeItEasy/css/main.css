@@ -278,6 +278,15 @@ h3 {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    
+    display: none;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+}
+.card-block.pop{
+    display: block;
+    
 }
 .card-block .card-desc{
     text-align: left;
@@ -330,13 +339,16 @@ h3 {
     position: relative;
     width: 50%;
     margin: 0 auto;
-    height: 100px;
+    height: 88px;
     z-index: 2;
 }
 
 /* Keyframes */
+.path{
+    opacity: 0;
+}
 .start-animation .path{
-    
+    opacity: 1;
   stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     
@@ -349,6 +361,7 @@ h3 {
   transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78); }
 }
 
+/* Keyframes */
 @keyframes dash {
     to{
         stroke-dashoffset: 0;
@@ -359,6 +372,23 @@ h3 {
         stroke-dashoffset: 0;
     }
 }
+
+@keyframes pop {
+    to{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+    }
+}
+@-webkit-keyframes pop {
+    to{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+    }
+}
+    
+
 
 /* Curves styles */
 .curve, .line {
