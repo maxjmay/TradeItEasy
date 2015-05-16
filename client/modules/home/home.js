@@ -23,6 +23,14 @@ Router.route('/', {
 				}, function (error, data) {
 					console.log(data)
 				});
+
+				Meteor.call('getTweets', {
+					term: 'TSCO.L',
+					from: new Date(),
+					to: new Date(2015, 00, 01)
+				}, function (error, data) {
+					console.log(data)
+				});
 				return {};
 			}
 		});
