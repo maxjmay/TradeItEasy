@@ -216,6 +216,11 @@ h3 {
 .intro{
     width: 60%;
     margin: 150px auto;
+    text-align: center;
+}
+
+.intro img {
+    padding: 20px;
 }
 .intro h1{
     text-align: center;
@@ -289,6 +294,11 @@ h3 {
     background-color: #ff6640;
 }
 
+.card-block h4 {
+    color: #dddddd;
+    float: right;
+    font-weight: normal;
+}
 
 .card-block{
 
@@ -423,7 +433,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe81a', end
     position: relative;
     width: 50%;
     margin: 0 auto;
+<<<<<<< HEAD
     height: 88px;
+=======
+    height: 85px;
+>>>>>>> 976fb7c72e016be5db53dcae9279b779ad80f74c
     z-index: 2;
 }
 .svg-stuff-2 svg{
