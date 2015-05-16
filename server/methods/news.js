@@ -1,4 +1,5 @@
 var cheerio = Meteor.npmRequire('cheerio');
+var phantom = require('phantom');
 
 Meteor.methods({
 	getNews: function (meta) {
@@ -10,6 +11,7 @@ Meteor.methods({
 		var term = meta.term.replace(' ', '+');
 
 		var requestUrl = 'https://www.google.co.uk/search?q=' + term + '&biw=1252&bih=968&source=lnt&tbs=cdr%3A1%2Ccd_min%3A' + formatNumber(to.getDate()) + '%2F' + formatNumber(from.getMonth()) + '%2F' + from.getFullYear() + '%2Ccd_max%3A' + formatNumber(from.getDate()) + '%2F' + formatNumber(from.getMonth()) + '%2F' + from.getFullYear() + '&tbm=nws';
+
 		console.log(requestUrl);
 		var res = Meteor.http.get(requestUrl);
 		var $ = cheerio.load(res.content);
@@ -18,7 +20,6 @@ Meteor.methods({
 			var link = ele.attribs.href.replace('/url?q=', '').split('/&sa=')[0];
 			news.push(link);
 		})
-		return news;
 	}
 });
 

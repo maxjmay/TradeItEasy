@@ -18,8 +18,8 @@ Router.route('/', {
 
 				Meteor.call('getNews', {
 					term: 'TSCO.L',
-					from: new Date(),
-					to: new Date(2015, 00, 01)
+					from: new Date(2014, 5, 9),
+					to: new Date(2014, 5, 9)
 				}, function (error, data) {
 					console.log(data)
 				});
