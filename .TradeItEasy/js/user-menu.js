@@ -5,17 +5,17 @@
 
 }(function($, window, document) {
 
-// The $ is now locally scoped 
+// The $ is now locally scoped
 // Listen for the jQuery ready event on the document
   $(function(){
-    
+
     // The DOM is ready!
     console.log("DOM is ready");
 
     // Only call functions we need when DOM is ready
     showUserMenu();
-    
-  });  
+
+  });
 
   // DOM isn't ready yet !
   console.log("DOM isn't ready");
@@ -41,7 +41,7 @@
         $(arrow).toggleClass("bottom-arrow");
       }
     });
-    
+
   }
 
 

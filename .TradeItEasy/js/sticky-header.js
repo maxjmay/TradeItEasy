@@ -5,10 +5,10 @@
 
 }(function($, window, document) {
 
-// The $ is now locally scoped 
+// The $ is now locally scoped
 // Listen for the jQuery ready event on the document
   $(function(){
-    
+
     // The DOM is ready!
     console.log("DOM is ready");
 
@@ -35,11 +35,11 @@
       topSpacing: 0,
       getWidthFrom: "window"
     });
-    
 
-  });  
+
+  });
 
   // DOM isn't ready yet !
   console.log("DOM isn't ready");
-  
+
 }));

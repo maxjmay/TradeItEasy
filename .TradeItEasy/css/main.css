@@ -86,7 +86,7 @@ body{
     width: 100%;
     padding: 0 0 50px 0;
     overflow: hidden;
-    
+
 }
 #miniheader{
     padding: 0;
@@ -114,7 +114,7 @@ h3 {
     width: 100%;
     padding: 0.5em;
     background: #A964EF;
-    
+
     z-index: 30;
 }
 .nav-item{
@@ -130,7 +130,7 @@ h3 {
     width: 32px;
     height: 32px;
     margin-right: 0.5em;
-    
+
     border-radius: 16px;
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
@@ -144,7 +144,7 @@ h3 {
     font-size: 1.0em;
     line-height: 1.0em;
     color: #fff;
-    
+
 }
 .user-profile h3{
     margin: 0;
@@ -171,7 +171,7 @@ h3 {
     margin: 0.1em 0 0 0;
     line-height: 1.0em;
     background: #fff;
-    
+
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -186,14 +186,14 @@ h3 {
     width: 80%;
     height: 100%;
     display: block;
-    
+
     border-bottom-left-radius: 3px;
     -webkit-border-bottom-left-radius: 3px;
     -moz-border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
     -webkit-top-bottom-left-radius: 3px;
     -moz-top-bottom-left-radius: 3px;
-        
+
 }
 
 
@@ -246,7 +246,7 @@ h3 {
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    
+
 }
 .game-intro h2{
     text-align: center;
@@ -270,11 +270,11 @@ h3 {
     padding: 0 1.5em;
     border: 1px solid #e1e1e1;
     background: #fff;
-    
+
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    
+
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -307,7 +307,7 @@ h3 {
     padding: 0.5em 1.5em;
     color: #fff;
     font-size: 0.9em;
-    
+
      border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -319,7 +319,7 @@ h3 {
     color: #fff;
     font-size: 1.2em;
     text-transform: uppercase;
-    
+
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -336,14 +336,14 @@ h3 {
 
 /* Keyframes */
 .start-animation .path{
-    
+
   stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    
+
   animation: dash 1800ms 1 forwards;
     -webkit-animation: dash 1800ms 1 forwards;
     -moz-animation: dash 1800ms 1 forwards;
-    
+
       -webkit-transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
   -moz-transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
   transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78); }
@@ -376,7 +376,7 @@ h3 {
             stroke-width: 0;
         }
       .control {
-        
+
         fill: none;
         stroke: none;
         stroke-width: 0;

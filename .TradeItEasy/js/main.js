@@ -1,4 +1,4 @@
-$(function(){ 
+$(function(){
 	/* vars */
 	$(window).on('scroll', function(){
 		var tubeScrollTop = $('#game-intro').offset().top;

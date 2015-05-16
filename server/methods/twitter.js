@@ -1,4 +1,4 @@
-var twitter = new TwitterApi();
+var cheerio = Meteor.npmRequire('cheerio');
 
 Meteor.methods({
 	getTweets: function (meta) {
@@ -7,46 +7,50 @@ Meteor.methods({
 		var from = meta.from;
 		var to = meta.to;
 
-		var fromYear = from.getFullYear();
-		var fromMonth = from.getMonth() + 1;
-		var fromDay = from.getDate();
+		var term = meta.term.replace(' ', '+');
 
-		if (fromMonth < 10) {
-			fromMonth = '0' + fromMonth;
+		var requestUrl = 'https://twitter.com/search?q="' + term + '"%20since%3A' + from.getFullYear() + '-' + formatNumber(from.getMonth() + 1) + '-' + formatNumber(from.getDate()) + '%20until%3A' + to.getFullYear() + '-' + formatNumber(to.getMonth() + 1) + '-' + formatNumber(to.getDate()) + '&count=100';
+
+		var res = Meteor.http.get(requestUrl);
+		var $ = cheerio.load(res.content);
+		var tweets = [];
+		var previousLang = '';
+
+		$('.tweet.original-tweet .content .username, .tweet.original-tweet .tweet-timestamp, .tweet.original-tweet .content p.tweet-text').each(function (index, ele) {
+			var text = '';
+
+			if (ele.attribs.title != undefined) {
+				tweets.push(ele.attribs.title);
+			} else {
+				text = $(this).text();
+
+				tweets.push(text);
+
+				if (ele.attribs.lang) {
+					tweets.push(ele.attribs.lang);
+				}
+			}
+		})
+
+		var finalTweets = [];
+
+		for (var i = 0; i < tweets.length; i += 4) {
+			if (tweets[i + 3] == 'en') {
+				finalTweets.push({
+					'user': tweets[i],
+					'date': tweets[i + 1],
+					'tweet': tweets[i + 2],
+					'lang': tweets[i + 3]
+				});
+			}
 		}
-
-		if (fromDay < 10) {
-			fromDay = '0' + fromDay;
-		}
-
-		var toYear = to.getFullYear();
-		var toMonth = to.getMonth() + 1;
-		var toDay = to.getDate();
-
-		if (toMonth< 10) {
-			toMonth = '0' + toMonth;
-		}
-
-		if (toDay < 10) {
-			toDay = '0' + toDay;
-		}
-
-//		var searchTerm = '"' + meta.term + '"&since=' + fromYear + '-' + fromMonth + '-' + fromDay + '&until=' + toYear + '-' + toMonth + '-' + toDay;
-		var searchTerm = 'TSCO.L';
-
-		var twitterResults = twitter.callAsApp('GET', 'search/tweets.json', {
-			q: 'TSCO.L',
-			since: '2008-05-13',
-			until: '2013-05-13'
-		});
-
-		//		for (var i = 0; statuses.length; i++) {
-		//var followerScore =
-		//var favouriteScore =
-		//var retweetScore =
-		//		}
-
-
-		return twitterResults;
+		return finalTweets;
 	}
 });
+
+function formatNumber(number) {
+	if (number < 10) {
+		number = '0' + number
+	}
+	return number;
+}

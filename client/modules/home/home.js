@@ -26,8 +26,8 @@ Router.route('/', {
 
 				Meteor.call('getTweets', {
 					term: 'TSCO.L',
-					from: new Date(2015, 00, 01),
-					to: new Date()
+					from: new Date(2014, 00, 01),
+					to: new Date(2014, 11, 30)
 				}, function (error, data) {
 					console.log(data)
 				});
