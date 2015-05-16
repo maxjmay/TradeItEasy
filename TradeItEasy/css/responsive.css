@@ -1,0 +1,238 @@
+@media only screen and (max-width: 520px){
+	.sign_features p{
+		width: 100%;
+		text-align: center;
+	}
+	.sign_features p span{
+		display: none;
+	}
+	button.apple{
+		margin-bottom: 20px;
+	}
+
+	#social ul li{
+		margin-right: 35px;
+	}
+	.footer_links{
+		width: 100%;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.footer_links h3{
+		text-align: center;
+	}
+
+}
+@media only screen and (min-width: 521px){
+	#social ul li{
+		margin-right: 50px;
+	}
+	.footer_links h3{
+		text-align: left;
+	}
+}
+@media only screen and (max-width: 880px){
+	#form_signin div{
+		width: 100%;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.sign_features{
+		position: relative;
+		left: 50%;
+		margin-left: -245px;
+	}
+
+	.desc{
+		width: 100%;
+		margin: 30px 0;
+	    padding: 80px 0 30px 0;
+	    border-top: 1px solid #d1d1d1;
+	    background-position: 50% 10%;
+	}
+	.dare{
+	    top: 0;
+	    left: 0;
+	    background: url('../img/icon_bomb.png') no-repeat 52% 30px/64px auto;
+	}
+	.rewards{
+	    top: 0;
+	    right: 0;
+	    background: url('../img/Reward_Icon.png') no-repeat 50% 30px/64px auto;
+	}
+	.post{
+	    top: 50%;
+	    left: 0;
+	    background: url('../img/icon_pics_vids.png') no-repeat 50% 30px/64px auto;
+	}
+	.hof{
+	    top: 50%;
+	    right: 0;
+	    background: url('../img/icon_hof_1.png') no-repeat 50% 30px/64px auto;
+}
+}
+@media only screen and (min-width: 881px){
+	#form_signin form{
+		width: 820px;
+	}
+
+	.desc{
+	    position: absolute;
+	    width: calc((100% - 420px) * 0.5);
+	    margin: 0;
+	    padding: 60px 0 0 0;
+	}
+
+	.dare{
+	    top: 0;
+	    left: 0;
+	    background: url('../img/icon_bomb.png') no-repeat 52% 0/64px auto;
+	}
+	.rewards{
+	    top: 0;
+	    right: 0;
+	    background: url('../img/Reward_Icon.png') no-repeat top/64px auto;
+	}
+	.post{
+	    top: 50%;
+	    left: 0;
+	    background: url('../img/icon_pics_vids.png') no-repeat top/64px auto;
+	}
+	.hof{
+	    top: 50%;
+	    right: 0;
+	    background: url('../img/icon_hof_1.png') no-repeat top/64px auto;
+	}
+}
+@media only screen and (min-width: 1000px){
+	.wrapper {
+	    margin: 0 auto;
+	    width: 960px;
+	}
+}
+
+
+@media only screen and (max-width: 768px){
+	.wrapper {
+	    margin: 0 auto;
+	    width: 960px;
+	}
+
+
+	.points{
+	    /*
+	    position: absolute;
+	    top: 0;
+	    right: 20px;
+	    */
+	    float: right;
+	    margin: 18px 20px 0 0;
+	}
+	.points a{
+	    text-decoration: none;
+	    color: #fff;
+	    font-family: 'Roboto Slab', Verdana, serif;
+	    font-size: 1.0em;
+	    font-weight: 700;
+	    line-height: 0.6em;
+	}
+	.points a span{
+	    color: #fff;
+	    font-family: 'Roboto Slab', Verdana, serif;
+	    font-size: 0.85em;
+	    position: relative;
+	    top: -5px;
+	   
+	}
+
+	#miniheader .logo{
+	    margin: 0 auto;
+	    padding: 20px 0 0 0;
+	    width: auto;
+	    height: 32px;
+	}
+	#miniheader .logo img{
+	    display: block;
+	    width: auto;
+	    height: 32px;
+	   
+	    margin: 0 auto;
+	    padding: 0;
+	    text-align: center;
+
+	/*    background: url('../img/logo_binpin.png') no-repeat center top;*/
+	    text-indent: -9999px;
+	}
+	.menu{
+	    /*
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    */
+	    float: left;
+	    width: auto;
+	    height: 24px;
+	    margin: 20px 0 0 20px;
+	}
+	.menu img{
+		width: auto;
+	    height: 24px;
+	}
+
+}
+@media only screen and (min-width: 769px){
+	.points{
+	    /*
+	    position: absolute;
+	    top: 0;
+	    right: 20px;
+	    */
+	    float: right;
+	    margin: 20px 20px 0 0;
+	}
+	.points a{
+	    text-decoration: none;
+	    color: #fff;
+	    font-family: 'Roboto Slab', Verdana, serif;
+	    font-size: 1.2em;
+	    font-weight: 700;
+	    line-height: 0.8em;
+
+	}
+	.points a span{
+	    color: #fff;
+	    font-family: 'Roboto Slab', Verdana, serif;
+	    font-size: 1.15em;
+	}
+
+	#miniheader .logo{
+	    margin: 0 auto;
+	    padding: 20px 0 0 0;
+	    width: auto;
+	    height: 44px;
+	}
+	#miniheader .logo img{
+	    display: block;
+	    width: 196px;
+	    height: 44px;
+	   
+	    margin: 0 auto;
+	    padding: 0;
+	    text-align: center;
+
+	/*    background: url('../img/logo_binpin.png') no-repeat center top;*/
+	    text-indent: -9999px;
+	}
+
+
+	.menu{
+	    /*
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    */
+	    float: left;
+	    width: 55px;
+	    margin: 20px 0 0 20px;
+	}
+}

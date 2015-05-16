@@ -1,0 +1,562 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+html, html a{
+    -webkit-font-smoothing: antialiased!important;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.004);
+}
+a, button{
+    -webkit-transition: all .30s;
+    -moz-transition: all .30s;
+    -o-transition: all .30s;
+    transition: all .30s;
+}
+body{
+    font-family: "Montserrat", Helvetica, sans-serif;
+    background: #f9f9f9;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    min-height: 800px;
+}
+
+#header, #miniheader{
+    width: 100%;
+    padding: 0 0 50px 0;
+    overflow: hidden;
+    
+}
+#miniheader{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background: #fff;
+}
+
+h3 {
+    display: inline-block;
+}
+
+.card-block > img {
+    margin-right: 20px;
+}
+
+/* Main container */
+.main{
+    background: #f9f9f9;
+}
+.sticky-navbar{
+   position: fixed;
+    width: 100%;
+    padding: 0.5em;
+    background: #A964EF;
+    
+    z-index: 30;
+}
+.nav-item{
+    display: inline-block;
+    vertical-align: top;
+     margin: 0 2em;
+}
+.nav-item:first-child{
+    margin: 0;
+}
+.user-profile img{
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5em;
+    
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+}
+.user-profile .user-stats{
+    float: left;
+}
+.user-profile h2{
+    margin: 0;
+    padding: 0;
+    font-size: 1.0em;
+    line-height: 1.0em;
+    color: #fff;
+    
+}
+.user-profile h3{
+    margin: 0;
+    padding: 0;
+    font-size: 1.0em;
+    line-height: 1.2em;
+    color: #54CBB3;
+}
+.user-level{
+    padding: 0 0.5em;
+    border-left: 1px solid #fff;
+}
+.user-level h3{
+    margin: 0;
+    padding: 0;
+    font-size: 1.0em;
+    line-height: 1.0em;
+    color: #fff;
+}
+.user-level span{
+    position: relative;
+    display: block;
+    width: 120px;
+    margin: 0.1em 0 0 0;
+    line-height: 1.0em;
+    background: #fff;
+    
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.user-level span:before{
+    content: "";
+    color: #fff;
+    background: #54CBB3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    display: block;
+    
+    border-bottom-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -webkit-top-bottom-left-radius: 3px;
+    -moz-top-bottom-left-radius: 3px;
+        
+}
+
+
+.user-money{
+    float: right;
+}
+.user-money h3{
+    margin: 0;
+    padding: 0.25em 0 0 0;
+    font-size: 1.3em;
+    line-height: 1.0em;
+    color: #F0EB78;
+}
+
+
+.intro{
+    width: 60%;
+    margin: 150px auto;
+}
+.intro h1{
+    text-align: center;
+}
+.intro h2{
+    font-family: "Lato";
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.2em;
+    color: #222;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+
+.main{
+    border-top: 1px solid #e1e1e1;
+}
+.game-intro{
+    position: relative;
+    width: 500px;
+    height: 400px;
+    margin: -102px auto 0 auto;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    z-index: 25;
+    /*
+    -webkit-box-shadow: 0px 0px 5px 0px #bbb;
+    -moz-box-shadow:    0px 0px 5px 0px #bbb;
+    box-shadow:         0px 0px 5px 0px #bbb;
+    */
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    
+}
+.game-intro h2{
+    text-align: center;
+    color: #F0EB78;
+}
+.card-desc{
+    padding: 0 1.5em;
+    font-family: "Lato";
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.2em;
+    font-size: 1em;
+    color: #666;
+}
+
+
+.card-block{
+    width: 100%;
+    margin: 0 auto;
+    width: 500px;
+    padding: 0 1.5em;
+    border: 1px solid #e1e1e1;
+    background: #fff;
+    
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.card-block .card-desc{
+    text-align: left;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.main-wrapper{
+    width: 500px;
+    margin: 0 auto;
+}
+
+/**/
+.line-sep{
+    position: relative;
+    width: 50%;
+    margin: 0;
+    height: 100px;
+    border-right: 6px solid #e3e3e3;
+}
+.line-sep span{
+    position: absolute;
+    right: -50px;
+    width: 50px;
+    background: #40ee69;
+    margin: 20px 0 0 0;
+    padding: 0.5em 1.5em;
+    color: #fff;
+    font-size: 0.9em;
+    
+     border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+}
+
+.go-button{
+    display: block;
+    background: #ffe81a;
+    color: #fff;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+/* SVG STUFF*/
+.svg-stuff{
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    height: 100px;
+    z-index: 2;
+}
+
+/* Keyframes */
+.start-animation .path{
+    
+  stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    
+  animation: dash 1800ms 1 forwards;
+    -webkit-animation: dash 1800ms 1 forwards;
+    -moz-animation: dash 1800ms 1 forwards;
+    
+      -webkit-transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+  -moz-transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+  transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78); }
+}
+
+@keyframes dash {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@-webkit-keyframes dash {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Curves styles */
+.curve, .line {
+        fill: none;
+        stroke-width: 1px;
+      }
+      .curve {
+        stroke: red;
+        stroke-width: 3px;
+      }
+        .curve:nth-child(3){
+            display: none;
+            fill: none;
+            stroke: red;
+            stroke-width: 0;
+        }
+      .control {
+        
+        fill: none;
+        stroke: none;
+        stroke-width: 0;
+      }
+      .t, .controltext {
+        font-size: .6em;
+          display: none;
+      }
+.line{
+    display:none;
+}
+svg circle{
+    display: none;
+}
+
+
+
+/* Shared classes */
+
+.clear {
+    clear: both;
+}
+
+.op_mask{
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.inline-block{
+    display: inline-block;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
