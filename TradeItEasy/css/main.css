@@ -262,14 +262,40 @@ h3 {
     color: #666;
 }
 
+.card-block:before {
+    content: '';
+    height: 15px;
+    background-color: purple;
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-top: -15px;
+    left: 0px;
+}
+
+.card-block.purple:before {
+    background-color: #d064ef;
+}
+
+.card-block.yellow:before {
+    background-color: #ffe81a;
+}
+
+.card-block.red:before {
+    background-color: #ff6640;
+}
+
 
 .card-block{
+
     width: 100%;
     margin: 0 auto;
     width: 500px;
     padding: 0 1.5em;
     border: 1px solid #e1e1e1;
     background: #fff;
+    position: relative;
+    padding-top: 15px;
     
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -290,12 +316,14 @@ h3 {
     margin: 0 auto;
 }
 
+
+
 /**/
 .line-sep{
     position: relative;
     width: 50%;
     margin: 0;
-    height: 100px;
+    height: 75px;
     border-right: 6px solid #e3e3e3;
 }
 .line-sep span{
