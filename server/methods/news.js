@@ -1,5 +1,4 @@
 var cheerio = Meteor.npmRequire('cheerio');
-var phantom = require('phantom');
 
 Meteor.methods({
 	getNews: function (meta) {
@@ -20,6 +19,7 @@ Meteor.methods({
 			var link = ele.attribs.href.replace('/url?q=', '').split('/&sa=')[0];
 			news.push(link);
 		})
+		return news;
 	}
 });
 
