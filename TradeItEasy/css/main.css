@@ -212,6 +212,11 @@ h3 {
 .intro{
     width: 60%;
     margin: 150px auto;
+    text-align: center;
+}
+
+.intro img {
+    padding: 20px;
 }
 .intro h1{
     text-align: center;
@@ -285,6 +290,11 @@ h3 {
     background-color: #ff6640;
 }
 
+.card-block h4 {
+    color: #dddddd;
+    float: right;
+    font-weight: normal;
+}
 
 .card-block{
 
@@ -358,7 +368,7 @@ h3 {
     position: relative;
     width: 50%;
     margin: 0 auto;
-    height: 100px;
+    height: 85px;
     z-index: 2;
 }
 

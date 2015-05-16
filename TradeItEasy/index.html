@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/jTinder.css">
 
     <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,100,400' rel='stylesheet' type='text/css'>
@@ -19,11 +20,11 @@
     <script src="js/jquery.js"></script>
     <script src="js/d3.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.transform2d.js"></script>
+    <script type="text/javascript" src="js/jquery.jTinder.js"></script>
     
-    
+
     <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
-
-
 </head>
 <body>
     <div id="container" class="container">
@@ -41,14 +42,14 @@
                     <span>10</span>
                 </div>
                 <div class="nav-item user-money">
-                    <h3>£10,000.00</h3>
+                    <h3>£100,000.00</h3>
                 </div>
                 
             </div>
             
             <div class="intro">
-                <h1>Trade it Easy</h1>
-                <h2 class="headline">Duis tincidunt nulla ut vulputate consequat. In non blandit sapien. Maecenas mollis, felis vitae rhoncus imperdiet, leo justo efficitur ligula, nec vestibulum tellus massa ullamcorper leo.</h2>
+                <img src="img/logo.png">
+                <h2 class="headline">A story-style adventure experience to help you get into stocks. If you don’t know where to start with share trading, you’re in the right place.</h2>
             </div>
             
         </header>
@@ -59,7 +60,7 @@
                     <h2 class="game-headline">Game Play</h2>
 
                     <p class="card-desc">
-                        Welcome to Trade it easy. A story-style adventure experience to help you get into stocks. If you don’t know where to start with share trading, you’re in the right place. 
+                        How to play & description of play 
                     </p>
                 </div>
                 <div id="vis" class="svg-stuff">
@@ -72,99 +73,121 @@
                 </div>
                 
                 <div class="card-block">
-                    <img src="img/plane.png"><h3>The Journey Begins</h3>
+                    <img src="img/plane.png"><h3>The Journey Begins</h3><h4> 1 January 2014</h4>
                     <p class="card-desc">
-                        Welcome to May 2014. I hope the time machine wasn’t too rough. Since you're from the future, you figure it would be a good idea to invest your money into shares. You're a young gun full of ideas and ambition but you're a bit lost when it comes to buying and selling shares. 
+                        Welcome to January 2014. I hope the time machine wasn’t too rough. Since you're from the future, you figure it would be a good idea to invest your money into shares. You're a young gun full of ideas and ambition but you're a bit lost when it comes to buying and selling shares. 
                     </p>   
                 </div>
                 <div class="line-sep">
-                    <span> +22 XP</span>
+                    <span> +10 XP</span>
                 </div> 
                 <div class="card-block purple">
-                    <img src="img/safe.png"><h3>Lucky You</h3>
+                    <img src="img/safe.png"><h3>Lucky You</h3><h4> 12 January 2014</h4>
                     <p class="card-desc">
-                        You find out your distant relative is actually a Nigerian Prince who wants to reward you for your efforts in getting his money into the UK. Don't worry - he's legit. You receive $10 000, which you decide to invest in shares. What is a share, you ask?
+                        You find out your distant relative is actually a Nigerian Prince who wants to reward you for your efforts in getting his money into the UK. Don't worry - he's legit. You receive $100 000, which you decide to invest in shares. What is a share, you ask?
                     </p>   
                 </div>
                 <div class="line-sep">
-                    <span> +22 XP</span>
+                    <span> +5 XP</span>
                 </div> 
                 <div class="card-block red">
-                    <img src="img/info.png"><h3>Learn the Term: Shares</h3>
+                    <img src="img/info.png"><h3>Learn the Term: Shares</h3><h4> 28 January 2014</h4>
                     <p class="card-desc">
                         Plain and simple, a share is a unit of onwership or interest in a corporation or financial asset.
                     </p> 
                 </div>
                 <div class="line-sep ">
-                    <span> +22 XP</span>
+                    <span> +10 XP</span>
                 </div>  
                 <div class="card-block yellow">
-                    <img src="img/question.png"><h3>Question</h3>
+                    <img src="img/question.png"><h3>Question</h3><h4> 28 January 2014</h4>
                     <p class="card-desc">As a shareholder, do you have control over the daily operations?</p>
                 </div>
                 <div class="line-sep">
                     <span> +22 XP</span>
                 </div>  
                 <div class="card-block purple">
-                    <img src="img/info.png"><h3>Being an Owner</h3>
+                    <img src="img/info.png"><h3>Being an Owner</h3><h4> 28 January 2014</h4>
                     <p class="card-desc">
                         While owning shares in a business does not mean that the shareholder has direct control over the business's day-to-day operations, being a shareholder does entitle the possessor to an equal distribution in any profits, if any are declared in the form of dividends.
                     </p> 
                 </div>
                 <div class="line-sep ">
-                    <span> +22 XP</span>
+                    <span> +14 XP</span>
                 </div>  
                 <div class="card-block yellow">
-                    <img src="img/question.png"><h3>Time to Decide</h3>
+                    <img src="img/question.png"><h3>Time to Decide</h3><h4> 7 February 2014</h4>
                     <p class="card-desc">
-                        You've done your homework, now it’s time to get stuck in. Before you pick a company, pick an industry. Which industry would you like to invest in?
+                        You've done your homework, now it’s time to get stuck in. Before you pick a company, you choose an industry. Which industry would you like to invest in?
                     </p>  
                 </div>
                 <div class="line-sep">
-                    <span> +22 XP</span>
+                    <span> +5 XP</span>
                 </div>  
                 <div class="card-block yellow">
-                    <img src="img/question.png"><h3>Time to Decide</h3>
+                    <img src="img/question.png"><h3>Time to Decide</h3><h4> 7 February 2014</h4>
                     <p class="card-desc">
                         Commodities? Of course. It's a good time to go in that direction. You've spent hours pouring over research and it's finally time to make your decision. Which company are you interested in investing in?
                     </p>  
                 </div>
                 <div class="line-sep">
-                    <span> +22 XP</span>
+                    <span> +35 XP</span>
                 </div>  
                 <div class="card-block purple">
-                    <img src="img/business.png"><h3>Understanding the Company</h3>
+                    <img src="img/business.png"><h3>Understand the Company</h3><h4> 26 February 2014</h4>
                     <p class="card-desc">
-
                     </p>  
                 </div>
                 <div class="line-sep ">
-                    <span> +22 XP</span>
+                    <span> +5 XP</span>
                 </div>  
                 <div class="card-block">
-                    <img src="img/alert.png"><h3>Understanding Risk</h3>
+                    <img src="img/alert.png"><h3>Understanding Risk</h3><h4> 13 March 2014</h4>
                     <p class="card-desc">
-
                     </p>  
                 </div>
                 <div class="line-sep">
-                    <span> +22 XP</span>
+                    <span> +5 XP</span>
                 </div>
                 <div class="card-block">
-                    <img src="img/alert.png"><h3>Identifying the Risks</h3>
+                    <img src="img/alert.png"><h3>Identifying the Risks</h3><h4> 29 March 2014</h4>
                     <p class="card-desc">
-
                     </p>  
                 </div>
-                
-                
-                
-               
+                <div class="line-sep">
+                    <span> +5 XP</span>
+                </div>
+                <div class="card-block">
+                    <img src="img/alert.png"><h3>Learn the Jargon</h3><h4> 29 March 2014</h4>
+                    <p class="card-desc">
+                        <div id="tinderslide">
+                            <ul>
+                                <li class="pane1"><!-- <div class="img"></div> --><div><h3>Outstanding Share</h3><p>This refers to the total number of shares of a company held by all its investors. This number is used to calculate other key metrics like Earnings Per Share and Price to Earnings ratio.</p></div><!-- <div class="like"></div><div class="dislike"></div> --></li>
+                                <li class="pane2"><!-- <div class="img"></div> --><div><h3>Dividends</h3><p>Once a company reaches a certain level of stability and profitability, it can choose to start paying dividends. During a growth period, profits are usually reinvested in a company so it can grow more (which also benefits investors), but once growth stabilizes, a company can choose to pay dividends to shareholders. Shareholders can then choose to reinvest those dividends for even more shares.</p></div><!-- <div class="like"></div><div class="dislike"></div> --></li>
+                                <li class="pane3"><!-- <div class="img"></div> --><div><h3>Earnings Per Share</h3><p>This is the amount of money that a company earns per share of stock. It's calculated as a company's net income minus dividends on preferred stock divided by the average outstanding shares. So, if a company makes $50m and there are 18 million shares outstanding, then one share is worth $2.78 worth of the company's income.</p></div><!-- <div class="like"></div><div class="dislike"></div> --></li>
+                                <li class="pane4"><!-- <div class="img"></div> --><div><h3>Market Capitalization</h3><p>Market cap is the current share price multiplied by all outstanding shares. This gives you a general idea of the size of a company. While getting the absolute value of a company is a bit more complicated than just looking at the market cap, comparing two company's market cap can help you get a better sense of scale than a share price will.</p></div><!-- <div class="like"></div><div class="dislike"></div> --></li>
+                                <li class="pane5"><!-- <div class="img"></div> --><div><h3>Price to Earnings Ratio</h3><p>Put simply, price to earnings (or "P/E") is a company's current share price divided by its EPS. This amount will show you about what investors are willing to pay per dollar of earnings. It can also be used as a metric to determine how much a company is over or undervalued.</p></div><!-- <div class="like"></div><div class="dislike"></div> --></li>
+                            </ul>
+                        </div>
+                    </p>  
+                </div>
+                <div class="line-sep">
+                    <span> +5 XP</span>
+                </div>
+                <div class="card-block">
+                    <img src="img/alert.png"><h3>Identifying the Risks</h3><h4> 29 March 2014</h4>
+                    <p class="card-desc">
+                    </p>  
+                </div>
+                <div class="line-sep">
+                    <span> +5 XP</span>
+                </div>
             </div>   
         </main>    
         <footer class="footer">
         
         </footer>
     </div>
+    <script>$("#tinderslide").jTinder();</script>
 </body>
 </html>
