@@ -11,11 +11,11 @@ Meteor.methods({
 		var fromMonth = from.getMonth() + 1;
 		var fromDay = from.getDate();
 
-		if (fromMonth.length == 1) {
+		if (fromMonth < 10) {
 			fromMonth = '0' + fromMonth;
 		}
 
-		if (fromDay.length == 1) {
+		if (fromDay < 10) {
 			fromDay = '0' + fromDay;
 		}
 
@@ -23,14 +23,30 @@ Meteor.methods({
 		var toMonth = to.getMonth() + 1;
 		var toDay = to.getDate();
 
-		if (toMonth.length == 1) {
+		if (toMonth< 10) {
 			toMonth = '0' + toMonth;
 		}
 
-		if (toDay.length == 1) {
+		if (toDay < 10) {
 			toDay = '0' + toDay;
 		}
 
-		return twitter.search('"' + meta.term + '"&since=' + fromYear + '-' + fromMonth + '-' + fromDay + '&until=' + toYear + '-' + toMonth + '-' + toDay);
+//		var searchTerm = '"' + meta.term + '"&since=' + fromYear + '-' + fromMonth + '-' + fromDay + '&until=' + toYear + '-' + toMonth + '-' + toDay;
+		var searchTerm = 'TSCO.L';
+
+		var twitterResults = twitter.callAsApp('GET', 'search/tweets.json', {
+			q: 'TSCO.L',
+			since: '2008-05-13',
+			until: '2013-05-13'
+		});
+
+		//		for (var i = 0; statuses.length; i++) {
+		//var followerScore =
+		//var favouriteScore =
+		//var retweetScore =
+		//		}
+
+
+		return twitterResults;
 	}
 });

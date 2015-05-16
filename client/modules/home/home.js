@@ -10,8 +10,8 @@ Router.route('/', {
 			data: function () {
 				Meteor.call('getStocks', {
 					company: 'TSCO.L',
-					from: new Date(),
-					to: new Date(2015, 00, 01)
+					from: new Date(2015, 00, 01),
+					to: new Date()
 				}, function (error, data) {
 					console.log(data)
 				});
@@ -26,8 +26,8 @@ Router.route('/', {
 
 				Meteor.call('getTweets', {
 					term: 'TSCO.L',
-					from: new Date(),
-					to: new Date(2015, 00, 01)
+					from: new Date(2015, 00, 01),
+					to: new Date()
 				}, function (error, data) {
 					console.log(data)
 				});
