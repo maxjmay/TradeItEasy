@@ -5,7 +5,7 @@ Meteor.methods({
 		var from = meta.from;
 		var to = meta.to;
 
-		var requestUrl = 'http://real-chart.finance.yahoo.com/table.csv?s=' + meta.company + '&a=' + to.getMonth() + '&b=' + to.getDate() + '&c=' + to.getFullYear() + '&d=' + from.getMonth() + '&e=' + from.getDate() + '&f=' + from.getFullYear() + '&g=d&ignore=.csv';
+		var requestUrl = 'http://real-chart.finance.yahoo.com/table.csv?s=' + meta.company + '&a=' + from.getMonth() + '&b=' + from.getDate() + '&c=' + from.getFullYear() + '&d=' + to.getMonth() + '&e=' + to.getDate() + '&f=' + to.getFullYear() + '&g=d&ignore=.csv';
 
 		console.log(requestUrl);
 		var res = Meteor.http.get(requestUrl);
