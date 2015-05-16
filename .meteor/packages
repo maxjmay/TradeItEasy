@@ -16,3 +16,6 @@ materialize:materialize
 service-configuration
 matb33:collection-hooks
 aldeed:template-extension
+http
+meteorhacks:npm
+npm-container
