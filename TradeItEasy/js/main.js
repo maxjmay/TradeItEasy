@@ -1,21 +1,17 @@
-$(function(){
-
+$(function(){ 
 	/* vars */
-	var initCodeline = 1554;
-	var finalCodeline = 1582;
-	var numCodelines = finalCodeline - initCodeline;
-
-	var target = $(".numbers");
-	var heightTarget = target.height();
-	var element = '';
-
-	element += '<ul>';
-	for(var i = initCodeline; i < finalCodeline; i++){
-		element += '<li class="number">'+i+'</li>';
-	}
-	element += '</ul>';
-
-	// Append the whole element
-	target.append(element);
+	$(window).on('scroll', function(){
+		var tubeScrollTop = $('#game-intro').offset().top;
+        /*
+        console.log(tubeScrollTop);
+        console.log($(window).scrollTop());
+        */
+		if($(window).scrollTop() >= tubeScrollTop){
+            console.log("LOL");
+			if(!$('.svg-stuff').hasClass('start-animation')){
+				$('.svg-stuff').addClass('start-animation');
+			}
+		}
+	});
 
 })
