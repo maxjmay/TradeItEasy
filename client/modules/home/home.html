@@ -1,3 +1,521 @@
 <template name="home">
-	Test
+	<div id="modalOverlay" class="displayNone">
+		<div>
+			<h3>Trader's Log:</h3>
+			<textarea>
+
+			</textarea>
+			<span id="save-button" class="save-button" onclick="showHideModal()">Save</span>
+		</div>
+	</div>
+	<div id="container" class="container">
+		<header id="header" class="header">
+			<div class="sticky-navbar">
+				<div class="nav-item user-profile">
+					<img src="img/img_avatar_4.png" alt="">
+					<div class="user-stats">
+						<h2>LaserLemons</h2>
+						<h3 class="user-type">Risk Averse</h3>
+					</div>
+				</div>
+				<div class="nav-item user-level">
+
+					<h3>Level <span id="levelNumber">1</span></h3>
+					<span id="XPbar">&nbsp;</span>
+				</div>
+				<div class="nav-item user-money">
+					<h3>Available: £<span id="available">0.00</span></h3>
+					<h3>Invested: £<span id="invested">0.00</span></h3>
+				</div>
+
+			</div>
+
+			<div class="intro">
+				<img src="img/logo.png">
+				<h2 class="headline">A story-style adventure experience to help you get into stocks. If you don’t know where to start with share trading, you’re in the right place.</h2>
+			</div>
+
+		</header>
+		<main id="main" class="main">
+			<div class="main-wrapper">
+
+				<div id="game-intro" class="game-intro">
+					<h2 class="game-headline">Game Play</h2>
+
+					<p class="card-desc">
+						You are the commander of your fate in this decision-based game. Your choices will affect the path you follow.
+						<br/>Learn the content, analyse the data and make decisions based on what you have learned. By the end of the journey you'll be ready to start trading shares.
+						<br/>
+						<br/> Data here is real, based on the last year of trading. This is an interactive, immersive experience for you to figure out what the trading world is all about.
+					</p>
+				</div>
+				<div id="vis" class="svg-stuff">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="202.307px" height="87.881px" viewBox="0 0 405.307 173.881" enable-background="new 0 0 405.307 173.881" xml:space="preserve">
+						<path class="path scroll" fill="none" stroke="#e3e3e3" stroke-width="10.2636" stroke-miterlimit="10" d="M400.149,0.12
+        C403.89,160.468,4.773,9.469,5.132,173.87" />
+					</svg>
+				</div>
+
+				<div class="card-block">
+					<img src="img/plane.png">
+					<h3>The Journey Begins</h3>
+					<h4> 1 January 2014</h4>
+					<p class="card-desc">
+						Welcome to May 2014. I hope the time machine wasn’t too rough. Since you're from the future, you figure it would be a good idea to invest your money into shares. You're a young gun full of ideas and ambition but you're a bit lost when it comes to buying and selling shares.
+					</p>
+					<div class="traderslog" onclick="showHideModal()">
+						<img src="img/traderslog.png" />
+					</div>
+				</div>
+				<div class="line-sep money hide">
+					<span> +$100,000.00</span>
+				</div>
+				<div class="card-block hide purple">
+					<img src="img/safe.png">
+					<h3>Lucky You</h3>
+					<h4> 12 January 2014</h4>
+					<p class="card-desc">
+						You find out your distant relative is actually a Nigerian Prince who wants to reward you for your efforts in getting his money into the UK. Don't worry - he's legit. You receive £100 000, which you decide to invest in shares. What is a share, you ask?
+					</p>
+					<div class="traderslog" onclick="showHideModal()">
+						<img src="img/traderslog.png" />
+					</div>
+				</div>
+				<div class="line-sep hide">
+					<span> +22 XP</span>
+				</div>
+				<div class="card-block hide red">
+					<img src="img/info.png">
+					<h3>Learn the Term: Shares</h3>
+					<h4> 28 January 2014</h4>
+					<p class="card-desc">
+						Plain and simple, a share is a unit of onwership or interest in a corporation or financial asset.
+					</p>
+					<div class="traderslog" onclick="showHideModal()">
+						<img src="img/traderslog.png" />
+					</div>
+				</div>
+				<div class="line-sep hide">
+					<span> +22 XP</span>
+				</div>
+				<div class="card-block hide yellow">
+					<img src="img/question.png">
+					<h3>Question</h3>
+					<p class="card-desc">
+						As a shareholder, do you have control over the daily operations?
+					</p>
+					<div class="traderslog" onclick="showHideModal()">
+						<img src="img/traderslog.png" />
+					</div>
+				</div>
+				<div class="line-sep hide">
+					<span> +10 XP</span>
+				</div>
+				<div class="question-container hide">
+					<div class="svg-stuff-2">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="202.307px" height="87.881px" viewBox="0 0 405.307 173.881" enable-background="new 0 0 405.307 173.881" xml:space="preserve">
+							<path class="path right" fill="none" stroke="#e3e3e3" stroke-width="10.2636" stroke-miterlimit="10" d="M400.149,0.12
+        C403.89,160.468,4.773,9.469,5.132,173.87" />
+						</svg>
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="202.307px" height="87.881px" viewBox="0 0 405.307 173.881" enable-background="new 0 0 405.307 173.881" xml:space="preserve">
+
+							<path class="path left" fill="none" stroke="#e3e3e3" stroke-width="10.2636" stroke-miterlimit="10" d="M400.176,173.87
+	C400.534,9.469,1.418,160.468,5.158,0.12" />
+						</svg>
+					</div>
+					<div class="mul-choices clearfix">
+						<div class="mul-choice split">
+							<a class="action yes" href="#,">
+                            Yes</a>
+							<div class="line-sep fixx hide">
+								<span>+22 XP</span>
+							</div>
+						</div>
+						<div class="mul-choice split">
+							<a class="action no" href="#,">
+                            No</a>
+							<div class="line-sep hide">
+								<span>+22 XP</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="svg-stuff-3 lol">
+						<svg class="first" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="202.307px" height="87.881px" viewBox="0 0 405.307 173.881" enable-background="new 0 0 405.307 173.881" xml:space="preserve">
+							<path class="path right" fill="none" stroke="#e3e3e3" stroke-width="10.2636" stroke-miterlimit="10" d="M400.149,0.12
+            C403.89,160.468,4.773,9.469,5.132,173.87" />
+						</svg>
+						<svg class="last" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="202.307px" height="87.881px" viewBox="0 0 405.307 173.881" enable-background="new 0 0 405.307 173.881" xml:space="preserve">
+
+							<path class="path left" fill="none" stroke="#e3e3e3" stroke-width="10.2636" stroke-miterlimit="10" d="M400.176,173.87
+	C400.534,9.469,1.418,160.468,5.158,0.12" />
+						</svg>
+					</div>
+				</div>
+				<div class="card-block hide purple">
+					<img src="img/info.png">
+					<h3>Being an Owner</h3>
+					<h4> 28 January 2014</h4>
+					<p class="card-desc">
+						While owning shares in a business does not mean that the shareholder has direct control over the business's day-to-day operations, being a shareholder does entitle the possessor to an equal distribution in any profits, if any are declared in the form of dividends.
+					</p>
+					<div class="traderslog" onclick="showHideModal()">
+						<img src="img/traderslog.png" />
+					</div>
+				</div>
+				<div class="line-sep hide">
+					<span> +22 XP</span>
+				</div>
+
+
+
+
+				<div class="card-block hide yellow">
+					<img src="img/question.png">
+					<h3>Time to Decide</h3>
+					<h4> 7 February 2014</h4>
+					<p class="card-desc">
+						Commodities? Of course. It's a good time to go in that direction. You've spent hours pouring over research and it's finally time to make your decision. Which company are you interested in investing in?
+					</p>
+					<div class="traderslog" onclick="showHideModal()">
+						<img src="img/traderslog.png" />
+					</div>
+				</div>
+				<div class="line-sep hide">
+					<span> +22 XP</span>
+				</div>
+				<div class="card-block hide purple">
+					<img src="img/business.png">
+					<h3>Understand the Company</h3>
+					<h4> 26 February 2014</h4>
+					<p class="card-desc">
+					</p>
+					<div class="traderslog" onclick="showHideModal()">
+						<img src="img/traderslog.png" />
+					</div>
+				</div>
+				<div class="line-sep hide">
+					<span> +22 XP</span>
+				</div>
+				<div class="card-block hide">
+					<img src="img/alert.png">
+					<h3>Understanding Risk</h3>
+					<h4> 13 March 2014</h4>
+					<p class="card-desc">
+					</p>
+					<div class="traderslog" onclick="showHideModal()">
+						<img src="img/traderslog.png" />
+					</div>
+				</div>
+				<div class="line-sep hide">
+					<span> +22 XP</span>
+				</div>
+
+				<div class="line-sep hide">
+					<span> +5 XP</span>
+				</div>
+				<div id="identify" class="card-block hide">
+					<img src="img/alert.png">
+					<h3>Identifying the Risks</h3>
+					<h4> 29 March 2014</h4>
+					<p class="card-desc">
+					</p>
+					<div class="traderslog" onclick="showHideModal()">
+						<img src="img/traderslog.png" />
+					</div>
+				</div>
+
+				<div class="line-sep last hey" onclick="increaseXP(20)">
+					<span id="go-button" class="go-button">GO</span>
+				</div>
+
+				<div class="shareholder hide">
+
+
+					<div class="choice-shareholder hide">
+						<div class="card-block hide purple owner">
+							<img src="img/info.png">
+							<h3>Being an Owner</h3>
+							<h4> 10 May 2014</h4>
+							<p class="card-desc">
+								While owning shares in a business does not mean that the shareholder has direct control over the business's day-to-day operations, being a shareholder does entitle the possessor to an equal distribution in any profits, if any are declared in the form of dividends.
+							</p>
+							<div class="traderslog" onclick="showHideModal()">
+								<img src="img/traderslog.png" />
+							</div>
+						</div>
+
+						<div class="line-sep hide">
+							<span> +22 XP</span>
+						</div>
+
+						<div class="card-block hide">
+							<img src="img/alert.png">
+							<h3>Learn the Jargon</h3>
+							<h4> 29 March 2014</h4>
+							<div class="card-desc">
+								<div id="tinderslide">
+									<ul>
+										<li class="pane1">
+											<!-- <div class="img"></div> -->
+											<div>
+												<h3>Outstanding Share</h3>
+												<p>This refers to the total number of shares of a company held by all its investors. This number is used to calculate other key metrics like Earnings Per Share and Price to Earnings ratio.</p>
+											</div>
+											<!-- <div class="like"></div><div class="dislike"></div> -->
+										</li>
+										<li class="pane2">
+											<!-- <div class="img"></div> -->
+											<div>
+												<h3>Dividends</h3>
+												<p>Once a company reaches a certain level of stability and profitability, it can choose to start paying dividends. During a growth period, profits are usually reinvested in a company so it can grow more (which also benefits investors), but once growth stabilizes, a company can choose to pay dividends to shareholders. Shareholders can then choose to reinvest those dividends for even more shares.</p>
+											</div>
+											<!-- <div class="like"></div><div class="dislike"></div> -->
+										</li>
+										<li class="pane3">
+											<!-- <div class="img"></div> -->
+											<div>
+												<h3>Earnings Per Share</h3>
+												<p>This is the amount of money that a company earns per share of stock. It's calculated as a company's net income minus dividends on preferred stock divided by the average outstanding shares. So, if a company makes $50m and there are 18 million shares outstanding, then one share is worth $2.78 worth of the company's income.</p>
+											</div>
+											<!-- <div class="like"></div><div class="dislike"></div> -->
+										</li>
+										<li class="pane4">
+											<!-- <div class="img"></div> -->
+											<div>
+												<h3>Market Capitalization</h3>
+												<p>Market cap is the current share price multiplied by all outstanding shares. This gives you a general idea of the size of a company. While getting the absolute value of a company is a bit more complicated than just looking at the market cap, comparing two company's market cap can help you get a better sense of scale than a share price will.</p>
+											</div>
+											<!-- <div class="like"></div><div class="dislike"></div> -->
+										</li>
+										<li class="pane5">
+											<!-- <div class="img"></div> -->
+											<div>
+												<h3>Price to Earnings Ratio</h3>
+												<p>Put simply, price to earnings (or "P/E") is a company's current share price divided by its EPS. This amount will show you about what investors are willing to pay per dollar of earnings. It can also be used as a metric to determine how much a company is over or undervalued.</p>
+											</div>
+											<!-- <div class="like"></div><div class="dislike"></div> -->
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="line-sep hide">
+							<span> +22 XP</span>
+						</div>
+						<div class="card-block decide hide yellow">
+							<img src="img/question.png">
+							<h3>Time to Decide</h3>
+							<h4> 7 February 2014</h4>
+							<p class="card-desc">
+								You've done your homework, now it’s time to get stuck in. Before you pick a company, you choose an industry. Which industry would you like to invest in?
+							</p>
+							<div class="traderslog" onclick="showHideModal()">
+								<img src="img/traderslog.png" />
+							</div>
+						</div>
+
+						<div class="line-sep last-2 hello hide" onclick="increaseXP(20)">
+							<span id="go-button-2" class="go-button">GO</span>
+						</div>
+
+						<div class="line-sep decide hide">
+							<span> +5 XP</span>
+						</div>
+
+						<div class="decision-time hide">
+							<div class="svg-stuff-2">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="202.307px" height="87.881px" viewBox="0 0 405.307 173.881" enable-background="new 0 0 405.307 173.881" xml:space="preserve">
+									<path class="path right" fill="none" stroke="#e3e3e3" stroke-width="10.2636" stroke-miterlimit="10" d="M400.149,0.12
+                C403.89,160.468,4.773,9.469,5.132,173.87" />
+								</svg>
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="202.307px" height="87.881px" viewBox="0 0 405.307 173.881" enable-background="new 0 0 405.307 173.881" xml:space="preserve">
+
+									<path class="path left" fill="none" stroke="#e3e3e3" stroke-width="10.2636" stroke-miterlimit="10" d="M400.176,173.87
+            C400.534,9.469,1.418,160.468,5.158,0.12" />
+								</svg>
+							</div>
+							<div class="mul-choices clearfix">
+								<div class="mul-choice split">
+									<a class="action yes" href="#,">
+                                    Technology</a>
+									<div class="line-sep fix hide special">
+										<span>+22 XP</span>
+									</div>
+								</div>
+								<div class="mul-choice split">
+									<a class="action no food" href="#,">
+                                    Food</a>
+									<div class="line-sep special hide">
+										<span>+22 XP</span>
+									</div>
+								</div>
+							</div>
+							<div class="svg-stuff-3 wow">
+								<svg class="first" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="202.307px" height="87.881px" viewBox="0 0 405.307 173.881" enable-background="new 0 0 405.307 173.881" xml:space="preserve">
+									<path class="path right" fill="none" stroke="#e3e3e3" stroke-width="10.2636" stroke-miterlimit="10" d="M400.149,0.12
+                    C403.89,160.468,4.773,9.469,5.132,173.87" />
+								</svg>
+								<svg class="last" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="202.307px" height="87.881px" viewBox="0 0 405.307 173.881" enable-background="new 0 0 405.307 173.881" xml:space="preserve">
+
+									<path class="path left" fill="none" stroke="#e3e3e3" stroke-width="10.2636" stroke-miterlimit="10" d="M400.176,173.87
+            C400.534,9.469,1.418,160.468,5.158,0.12" />
+								</svg>
+							</div>
+
+							<div class="choice-company hide">
+								<div class="card-block-2 hide-2 yellow">
+									<img src="img/question.png">
+									<h3>Pick a Company</h3>
+									<p class="card-desc">
+										Which company are you interested in investing in?
+									</p>
+									<div class="traderslog" onclick="showHideModal()">
+										<img src="img/traderslog.png" />
+									</div>
+								</div>
+								<div class="line-sep decide hide">
+									<span> +5 XP</span>
+								</div>
+
+
+								<div class="decision-company hide">
+									<div class="svg-stuff-2">
+										<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="202.307px" height="87.881px" viewBox="0 0 405.307 173.881" enable-background="new 0 0 405.307 173.881" xml:space="preserve">
+											<path class="path right" fill="none" stroke="#e3e3e3" stroke-width="10.2636" stroke-miterlimit="10" d="M400.149,0.12
+                        C403.89,160.468,4.773,9.469,5.132,173.87" />
+										</svg>
+										<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="202.307px" height="87.881px" viewBox="0 0 405.307 173.881" enable-background="new 0 0 405.307 173.881" xml:space="preserve">
+
+											<path class="path left" fill="none" stroke="#e3e3e3" stroke-width="10.2636" stroke-miterlimit="10" d="M400.176,173.87
+                    C400.534,9.469,1.418,160.468,5.158,0.12" />
+										</svg>
+									</div>
+									<div class="mul-choices clearfix">
+										<div class="mul-choice split">
+											<a class="action yes" href="#,">
+                                            Aldi</a>
+											<div class="line-sep fix hide special">
+												<span>+22 XP</span>
+											</div>
+										</div>
+										<div class="mul-choice split">
+											<a class="action no tesco" href="#,">
+                                            Tesco</a>
+											<div class="line-sep special-2 hide">
+												<span>+22 XP</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="svg-stuff-3 wow">
+										<svg class="first" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="202.307px" height="87.881px" viewBox="0 0 405.307 173.881" enable-background="new 0 0 405.307 173.881" xml:space="preserve">
+											<path class="path right" fill="none" stroke="#e3e3e3" stroke-width="10.2636" stroke-miterlimit="10" d="M400.149,0.12
+                        C403.89,160.468,4.773,9.469,5.132,173.87" />
+										</svg>
+										<svg class="last" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="202.307px" height="87.881px" viewBox="0 0 405.307 173.881" enable-background="new 0 0 405.307 173.881" xml:space="preserve">
+
+											<path class="path left" fill="none" stroke="#e3e3e3" stroke-width="10.2636" stroke-miterlimit="10" d="M400.176,173.87
+                    C400.534,9.469,1.418,160.468,5.158,0.12" />
+										</svg>
+									</div>
+
+									<div class="understand-company hide">
+										<div class="tweets card-block-2 hide-2 purple">
+											<img src="img/business.png">
+											<h3>Analyse the Tweets</h3>
+											<h4> 7 February 2014</h4>
+											<p class="card-desc">
+												coezcoez Blablab lablablabla balball alalba
+											</p>
+
+											<div class="slider">
+												<ul class="bxslider">
+													<li><img src="http://bxslider.com/images/730_200/houses.jpg">
+													</li>
+													<li><img src="http://bxslider.com/images/730_200/hill_trees.jpg">
+													</li>
+
+													<li><img src="http://bxslider.com/images/730_200/me_trees.jpg">
+													</li>
+													<li><img src="http://bxslider.com/images/730_200/houses.jpg">
+													</li>
+													<li><img src="http://bxslider.com/images/730_200/hill_trees.jpg">
+													</li>
+
+													<li><img src="http://bxslider.com/images/730_200/me_trees.jpg">
+													</li>
+
+												</ul>
+
+											</div>
+
+										</div>
+										<div class="traderslog" onclick="showHideModal()">
+											<img src="img/traderslog.png" />
+										</div>
+										<div class="line-sep decide hide">
+											<span> +5 XP</span>
+										</div>
+
+
+
+
+
+									</div>
+
+
+
+
+
+
+								</div>
+
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</main>
+
+
+		<footer class="footer">
+
+		</footer>
+	</div>
+
+
+	<script>
+		$("#tinderslide").jTinder();
+	</script>
+	<script type="text/javascript">
+		function showHideModal() {
+			$("#modalOverlay").toggleClass("displayNone");
+		}
+
+
+
+
+		var XP = 0;
+		var level;
+
+		function increaseLvl() {
+			$("#levelNumber").text(Number($("#levelNumber").text()) + 1);
+		}
+
+		function increaseXP(amount) {
+
+			XP = amount + XP;
+			if (XP >= 100) {
+				XP = 0;
+				increaseLvl();
+			}
+
+			$('head').append('<style>#XPbar:before{width:' + XP + '% !important;}</style>');
+		}
+	</script>
 </template>
