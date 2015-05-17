@@ -4,7 +4,7 @@ $(function(){
     var counter2 = 0;
 	$(window).on('scroll', function(){
 		var game = $('#game-intro').offset().top;
-        var parent = $('#identify').offset().top;;
+        var parent = $('#identify').offset().top;
         /*
         console.log(tubeScrollTop);
         console.log($(window).scrollTop());
@@ -41,6 +41,9 @@ $(function(){
             $(".shareholder").removeClass("hide");
         }
         
+        if(!$(".line-sep.fix").hasClass("hide")){
+            $(".line-sep.fix").addClass("hide")
+        }
         
         //console.log(counter);
         //console.log(counter2);
@@ -50,6 +53,7 @@ $(function(){
     });
     
     $(".action").on("click", function(){
+        console.log("yoho");
         var target = $(this).parent().find(".line-sep");
         if(target.hasClass("hide")){
             target.removeClass("hide");

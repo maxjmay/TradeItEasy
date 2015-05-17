@@ -433,11 +433,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe81a', end
     position: relative;
     width: 50%;
     margin: 0 auto;
-<<<<<<< HEAD
     height: 88px;
-=======
-    height: 85px;
->>>>>>> 976fb7c72e016be5db53dcae9279b779ad80f74c
     z-index: 2;
 }
 .svg-stuff-2 svg{
@@ -454,21 +450,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe81a', end
     position: absolute;
     opacity: 0;
     
-    animation: movecurve 1000ms 1000ms 1 forwards;
-    -webkit-animation: movecurve 1000ms 1000ms 1 forwards;
-    -moz-animation: movecurve 1000ms 1000ms 1 forwards;
 }
 .svg-stuff-3.no svg{
     left: 138px;
 }
 .svg-stuff-3.no svg:first-child{
     display: block;
+    
+    animation: movecurve 1000ms 1000ms 1 forwards;
+    -webkit-animation: movecurve 1000ms 1000ms 1 forwards;
+    -moz-animation: movecurve 1000ms 1000ms 1 forwards;
 }
 .svg-stuff-3.yes svg{
     left: -82px;
 }
 .svg-stuff-3.yes svg:last-child{
     display: block;
+    
+    animation: movecurve 1000ms 1000ms 1 forwards;
+    -webkit-animation: movecurve 1000ms 1000ms 1 forwards;
+    -moz-animation: movecurve 1000ms 1000ms 1 forwards;
 }
 
 
