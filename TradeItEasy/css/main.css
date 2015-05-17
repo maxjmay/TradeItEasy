@@ -693,7 +693,9 @@ svg circle{
 }
 
 
-
+.choice-shareholder.hide{
+    display: none;
+}
 
 
 /* Shared classes */

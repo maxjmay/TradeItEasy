@@ -26,7 +26,7 @@ $(function(){
         */
 	});
     
-    $("#go-button").on("click", function(){
+    $(".go-button").on("click", function(){
         
         if($($(".card-block.hide").get(counter)).hasClass("hide")){
             $($(".card-block.hide").get(counter)).removeClass("hide");
@@ -42,7 +42,8 @@ $(function(){
         }
         
         if(!$(".line-sep.fix").hasClass("hide")){
-            $(".line-sep.fix").addClass("hide")
+            $(".line-sep.fix").addClass("hide");
+            
         }
         
         //console.log(counter);
@@ -64,6 +65,11 @@ $(function(){
         }
         else{
             $(".svg-stuff-3").addClass("no");
+            if($(".choice-shareholder").hasClass("hide")){
+                $(".choice-shareholder").removeClass("hide");
+                $(".line-sep.last-2").removeClass("hide");
+
+            }
         }
         
     });
