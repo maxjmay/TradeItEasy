@@ -24,7 +24,10 @@ body {
     height: 500px;
     background-image: url('../img/tinder.png');
     background-position: 50% 50%;
+    cursor: pointer;
 }
+
+
 
 #tinderslide div {
     padding:20px;
