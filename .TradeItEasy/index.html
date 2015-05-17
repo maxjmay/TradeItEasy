@@ -31,6 +31,15 @@
     <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
 </head>
 <body>
+    <div id="modalOverlay" class="displayNone">
+        <div>
+            <h3>Trader's Log:</h3>
+            <textarea>
+
+            </textarea>
+            <span id="save-button" class="save-button" onclick="showHideModal()">Save</span>
+        </div>
+    </div>
     <div id="container" class="container">
         <header id="header" class="header">
             <div class="sticky-navbar">
@@ -42,7 +51,7 @@
                     </div>
                 </div>
                 <div class="nav-item user-level">
-                    
+
                     <h3>Level <span id="levelNumber">1</span></h3>
                     <span id="XPbar">&nbsp;</span>
                 </div>
@@ -66,10 +75,10 @@
                     <h2 class="game-headline">Game Play</h2>
 
                     <p class="card-desc">
-                        You are the commander of your fate in this decision-based game. Your choices will affect the path you follow. <br/>Learn the content, analyse the data and make decisions based on what you have learned. By the end of the journey you'll be ready to start trading shares. 
+                        You are the commander of your fate in this decision-based game. Your choices will affect the path you follow. <br/>Learn the content, analyse the data and make decisions based on what you have learned. By the end of the journey you'll be ready to start trading shares.
 <br/>
 <br/>
-                        
+
 Data here is real, based on the last year of trading. This is an interactive, immersive experience for you to figure out what the trading world is all about.
                     </p>
                 </div>
@@ -87,6 +96,9 @@ Data here is real, based on the last year of trading. This is an interactive, im
                     <p class="card-desc">
                         Welcome to May 2014. I hope the time machine wasn’t too rough. Since you're from the future, you figure it would be a good idea to invest your money into shares. You're a young gun full of ideas and ambition but you're a bit lost when it comes to buying and selling shares.
                     </p>
+                    <div class="traderslog" onclick="showHideModal()">
+                        <img src="img/traderslog.png"/>
+                    </div>
                 </div>
                 <div class="line-sep money hide">
                     <span> +$100,000.00</span>
@@ -96,6 +108,9 @@ Data here is real, based on the last year of trading. This is an interactive, im
                     <p class="card-desc">
                         You find out your distant relative is actually a Nigerian Prince who wants to reward you for your efforts in getting his money into the UK. Don't worry - he's legit. You receive £100 000, which you decide to invest in shares. What is a share, you ask?
                     </p>
+                    <div class="traderslog" onclick="showHideModal()">
+                        <img src="img/traderslog.png"/>
+                    </div>
                 </div>
                 <div class="line-sep hide">
                     <span> +22 XP</span>
@@ -105,6 +120,9 @@ Data here is real, based on the last year of trading. This is an interactive, im
                     <p class="card-desc">
                         Plain and simple, a share is a unit of onwership or interest in a corporation or financial asset.
                     </p>
+                    <div class="traderslog" onclick="showHideModal()">
+                        <img src="img/traderslog.png"/>
+                    </div>
                 </div>
                 <div class="line-sep hide">
                     <span> +22 XP</span>
@@ -114,6 +132,9 @@ Data here is real, based on the last year of trading. This is an interactive, im
                     <p class="card-desc">
                         As a shareholder, do you have control over the daily operations?
                     </p>
+                    <div class="traderslog" onclick="showHideModal()">
+                        <img src="img/traderslog.png"/>
+                    </div>
                 </div>
                 <div class="line-sep hide">
                     <span> +10 XP</span>
@@ -172,6 +193,9 @@ Data here is real, based on the last year of trading. This is an interactive, im
                     <p class="card-desc">
                         While owning shares in a business does not mean that the shareholder has direct control over the business's day-to-day operations, being a shareholder does entitle the possessor to an equal distribution in any profits, if any are declared in the form of dividends.
                     </p>
+                    <div class="traderslog" onclick="showHideModal()">
+                        <img src="img/traderslog.png"/>
+                    </div>
                 </div>
                 <div class="line-sep hide">
                     <span> +22 XP</span>
@@ -185,6 +209,9 @@ Data here is real, based on the last year of trading. This is an interactive, im
                     <p class="card-desc">
                         Commodities? Of course. It's a good time to go in that direction. You've spent hours pouring over research and it's finally time to make your decision. Which company are you interested in investing in?
                     </p>
+                    <div class="traderslog" onclick="showHideModal()">
+                        <img src="img/traderslog.png"/>
+                    </div>
                 </div>
                 <div class="line-sep hide">
                     <span> +22 XP</span>
@@ -193,6 +220,9 @@ Data here is real, based on the last year of trading. This is an interactive, im
                     <img src="img/business.png"><h3>Understand the Company</h3><h4> 26 February 2014</h4>
                     <p class="card-desc">
                     </p>
+                    <div class="traderslog" onclick="showHideModal()">
+                        <img src="img/traderslog.png"/>
+                    </div>
                 </div>
                 <div class="line-sep hide">
                     <span> +22 XP</span>
@@ -201,6 +231,9 @@ Data here is real, based on the last year of trading. This is an interactive, im
                     <img src="img/alert.png"><h3>Understanding Risk</h3><h4> 13 March 2014</h4>
                     <p class="card-desc">
                     </p>
+                    <div class="traderslog" onclick="showHideModal()">
+                        <img src="img/traderslog.png"/>
+                    </div>
                 </div>
                 <div class="line-sep hide">
                     <span> +22 XP</span>
@@ -213,6 +246,9 @@ Data here is real, based on the last year of trading. This is an interactive, im
                     <img src="img/alert.png"><h3>Identifying the Risks</h3><h4> 29 March 2014</h4>
                     <p class="card-desc">
                     </p>
+                    <div class="traderslog" onclick="showHideModal()">
+                        <img src="img/traderslog.png"/>
+                    </div>
                 </div>
 
                 <div class="line-sep last hey" onclick="increaseXP(20)">
@@ -228,6 +264,9 @@ Data here is real, based on the last year of trading. This is an interactive, im
                             <p class="card-desc">
                                 While owning shares in a business does not mean that the shareholder has direct control over the business's day-to-day operations, being a shareholder does entitle the possessor to an equal distribution in any profits, if any are declared in the form of dividends.
                             </p>
+                            <div class="traderslog" onclick="showHideModal()">
+                        <img src="img/traderslog.png"/>
+                    </div>
                         </div>
 
                         <div class="line-sep hide">
@@ -257,6 +296,9 @@ Data here is real, based on the last year of trading. This is an interactive, im
                             <p class="card-desc">
                                 You've done your homework, now it’s time to get stuck in. Before you pick a company, you choose an industry. Which industry would you like to invest in?
                             </p>
+                            <div class="traderslog" onclick="showHideModal()">
+                        <img src="img/traderslog.png"/>
+                    </div>
                         </div>
 
                         <div class="line-sep last-2 hello hide" onclick="increaseXP(20)">
@@ -321,6 +363,9 @@ Data here is real, based on the last year of trading. This is an interactive, im
                                     <p class="card-desc">
                                         Which company are you interested in investing in?
                                     </p>
+                                    <div class="traderslog" onclick="showHideModal()">
+                        <img src="img/traderslog.png"/>
+                    </div>
                                 </div>
                                 <div class="line-sep decide hide">
                                     <span> +5 XP</span>
@@ -382,6 +427,7 @@ Data here is real, based on the last year of trading. This is an interactive, im
                                             <p class="card-desc">
                                                coezcoez Blablab lablablabla balball alalba
                                             </p>
+                                            
                                             <div class="slider">
                                                 <ul class="bxslider">
                                                     <li><img src="http://bxslider.com/images/730_200/houses.jpg"></li>
@@ -396,7 +442,11 @@ Data here is real, based on the last year of trading. This is an interactive, im
                                                 </ul>
                                                                                             
                                             </div>
+                                            
                                         </div>
+                                        <div class="traderslog" onclick="showHideModal()">
+                        <img src="img/traderslog.png"/>
+                    </div>
                                         <div class="line-sep decide hide">
                                             <span> +5 XP</span>
                                         </div>
@@ -423,21 +473,33 @@ Data here is real, based on the last year of trading. This is an interactive, im
                 </div>
             </div>
         </main>
+            
+            
         <footer class="footer">
 
         </footer>
     </div>
+        
+        
     <script>$("#tinderslide").jTinder();</script>
     <script type="text/javascript">
+		
+		function showHideModal() {
+			$("#modalOverlay").toggleClass("displayNone");
+		}
+		
+	
+		
+		
         var XP =0;
         var level;
-        
+
         function increaseLvl() {
             $("#levelNumber").text( Number($("#levelNumber").text()) + 1 );
         }
-        
+
         function increaseXP(amount) {
-            
+
             XP = amount + XP;
             if (XP >= 100) {
                 XP = 0;
@@ -447,5 +509,7 @@ Data here is real, based on the last year of trading. This is an interactive, im
             $('head').append('<style>#XPbar:before{width:'+XP+'% !important;}</style>');
         }
     </script>
+        
+        
 </body>
 </html>

@@ -224,6 +224,12 @@ h3 {
     vertical-align: middle;
 }
 
+.traderslog {
+    display: inline-block;
+    float: right;
+    margin-right:-28px;
+    cursor:pointer;
+}
 
 .intro{
     width: 60%;
@@ -432,9 +438,69 @@ h3 {
     -moz-animation: none;
     */
 }
+
 .line-sep span.go-button.hide{
     display: none;
 }
+
+
+#modalOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 999;
+}
+
+.displayNone {
+	display: none;
+}
+
+#modalOverlay  div {
+    width: 350px;
+    height: 320px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+#modalOverlay  div textarea {
+    width: 100%;
+	height: 150px;
+    display: block;
+	padding: 10px;
+}
+    
+.save-button {
+	cursor: pointer;
+	margin-top: 20px;
+    display: block;
+	float: right;
+    padding: 0.5em;
+    line-height: 3em;
+    width: 60px;
+    height: 60px;
+    background: #ffe81a;
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    background: -moz-linear-gradient(45deg, #ffe81a 0%, #ffcf1d 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#ffe81a), color-stop(100%,#ffcf1d)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(45deg, #ffe81a 0%,#ffcf1d 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(45deg, #ffe81a 0%,#ffcf1d 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(45deg, #ffe81a 0%,#ffcf1d 100%); /* IE10+ */
+background: linear-gradient(45deg, #ffe81a 0%,#ffcf1d 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe81a', endColorstr='#ffcf1d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
 .line-sep span.go-button{
     display: block;
     right: -36px;
