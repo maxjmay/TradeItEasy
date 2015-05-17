@@ -140,3 +140,14 @@ function formatNumber(number) {
 	}
 	return number;
 }
+
+function getTweetsFrom(term, from, to) {
+	Meteor.call('getTweets', {
+		term: term,
+		from: from,
+		to: to
+	}, function (error, data) {
+		console.log(data)
+	});
+	return {};
+}
