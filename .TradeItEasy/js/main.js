@@ -26,17 +26,17 @@ $(function(){
         */
 	});
 
-    $(".go-button").on("click", function(){
+    $("#go-button").on("click", function(){
 
         if($($(".card-block.hide").get(counter)).hasClass("hide")){
             $($(".card-block.hide").get(counter)).removeClass("hide");
         }
 
-        if($($(".line-sep.hide").get(counter)).hasClass("hide")){
+        if($($(".line-sep.hide").get(counter)).hasClass("hide") && !$($(".line-sep.hide").get(counter)).hasClass("fixx")){
             $($(".line-sep.hide").get(counter)).removeClass("hide");
         }
 
-        if(counter == $(".card-block.hide").length){
+        if(counter == $(".card-block.hide").length -1){
             $(".line-sep.last").addClass("hide");
             $(".shareholder").removeClass("hide");
         }
@@ -48,10 +48,29 @@ $(function(){
 
         //console.log(counter);
         //console.log(counter2);
-
-
-
     });
+
+    var counter = 0;
+    var counter3 = 0;
+    $("#go-button-2").on("click", function(){
+        if($($(".choice-shareholder").find(".card-block.hide").get(counter)).hasClass("hide")){
+            $($(".choice-shareholder").find(".card-block.hide").get(counter)).removeClass("hide");
+        }
+
+        if($($(".choice-shareholder").find(".line-sep.hide").get(counter)).hasClass("hide")){
+            $($(".choice-shareholder").find(".line-sep.hide").get(counter)).removeClass("hide");
+        }
+        console.log($(".choice-shareholder").find(".card-block").length);
+        console.log(counter3);
+        if(counter3 == $($(".choice-shareholder").find(".card-block")).length - 1){
+            $(".choice-shareholder").find(".line-sep.last-2").addClass("hide");
+            $(".decision-time").removeClass("hide");
+
+        }
+
+        counter3++;
+     });
+
 
     $(".action").on("click", function(){
         console.log("yoho");
@@ -61,15 +80,39 @@ $(function(){
         }
 
         if($(this).hasClass("yes")){
-            $(".svg-stuff-3").addClass("yes");
+            $(this).parent().parent().next().addClass("yes");
         }
         else{
-            $(".svg-stuff-3").addClass("no");
+            $(this).parent().parent().next().addClass("no");
             if($(".choice-shareholder").hasClass("hide")){
                 $(".choice-shareholder").removeClass("hide");
                 $(".line-sep.last-2").removeClass("hide");
 
+                if(!$(".line-sep.decide").hasClass("hide")){
+                    $(".line-sep.decide").addClass("hide");
+
+                }
+
+                if(!$(".card-block.decide").hasClass("hide")){
+                    $(".card-block.decide").addClass("hide");
+
+                }
             }
+        }
+
+
+        if($(this).hasClass("food")){
+            $(".choice-company").removeClass("hide");
+            if($(".card-block-2").hasClass("hide-2")){
+                $(".card-block-2").removeClass("hide-2");
+            }
+
+            $(".decision-company").removeClass("hide");
+
+        }
+
+        if($(this).hasClass("tesco")){
+            $(".understand-company").removeClass("hide");
         }
 
     });
