@@ -4,30 +4,29 @@
  */
 /* globals Router, Meteor, Examples */
 
-var maxDate = new Date(2015, 04, 20);
+var maxDate = new Date(2015, 04, 17);
+var from = new Date(2014, 4, 1);
+
+var labels = [{
+	date: new Date(2014, 5, 27),
+	message: 'Annual General Meeting'
+}, {
+	date: new Date(2014, 7, 29),
+	message: 'Shock low profit warning'
+}, {
+	date: new Date(2014, 9, 23),
+	message: 'Accounting announced error'
+}, {
+	date: new Date(2015, 0, 8),
+	message: 'Unprofitable stores closed'
+}]
 
 Router.route('/', {
 	action: function () {
 		this.render('home', {
 			data: function () {
-
-				//graphAllTheData(new Date(2014, 04, 01))
-				graphAllTheData(new Date(2014, 04, 01))
-					//				Meteor.call('getNews', {
-					//					term: 'TSCO.L',
-					//					from: new Date(2014, 5, 9),
-					//					to: new Date(2014, 5, 9)
-					//				}, function (error, data) {
-					//					console.log(data)
-					//				});
-
-				Meteor.call('getTweets', {
-					term: 'TSCO.L',
-					from: new Date(2014, 00, 01),
-					to: new Date(2014, 11, 30)
-				}, function (error, data) {
-					console.log(data)
-				});
+				//graphAllTheData(new Date(2014, 5, 28))
+				graphAllTheData(maxDate)
 				return {};
 			}
 		});
@@ -37,10 +36,11 @@ Router.route('/', {
 function graphAllTheData(to) {
 	Meteor.call('getStocks', {
 		company: 'TSCO.L',
-		from: new Date(2014, 00, 01),
+		from: from,
 		to: to
 	}, function (error, data) {
 		drawGraph(data)
+		drawLabels(to, data);
 	});
 }
 
@@ -110,7 +110,7 @@ function drawGraph(data) {
 		return d3.time.format("%Y-%m-%d").parse(maxDate.getFullYear() + '-' + formatNumber(maxDate.getMonth()) + '-' + formatNumber(maxDate.getDate()));
 	}));
 
-	x.domain([new Date(2014, 00, 01), maxDate])
+	x.domain([from, maxDate])
 
 	y.domain(d3.extent(data, function (d) {
 		return d['Close'];
@@ -132,6 +132,22 @@ function drawGraph(data) {
 		.append("text")
 		.attr("transform", "rotate(-90)")
 		.attr("y", 6)
+}
+
+function drawLabels(to, data) {
+	labels.forEach(function (label, index) {
+		console.log(label.date);
+		if (label.date < to) {
+			var diff = (from.getTime() - maxDate.getTime()) - (from.getTime() - label.date.getTime());
+			var total = from.getTime() - maxDate.getTime();
+
+			var _width = window.innerWidth - 20;
+
+			var percent = total / diff;
+
+			$('body').append('<div style="bottom: ' + 250 + 'px; left:' + (_width - (_width / percent) + 40) + 'px" class="glabel">' + label.message + '</div>')
+		}
+	});
 }
 
 function formatNumber(number) {
