@@ -409,7 +409,7 @@ function init() {
 		} else if (ehh3 == 1) {
 			graphAllTheData(new Date(2014, 4, 31))
 		} else if (ehh3 == 2) {
-			graphAllTheData(new Date(2014, 5, 1))
+			graphAllTheData(maxDate)
 		}
 
 		ehh3++;
