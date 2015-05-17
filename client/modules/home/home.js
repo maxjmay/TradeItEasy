@@ -5,7 +5,7 @@
 /* globals Router, Meteor, Examples */
 
 var maxDate = new Date(2015, 04, 17);
-var from = new Date(2014, 4, 1);
+var from = new Date(2014, 0, 1);
 
 var labels = [{
 	date: new Date(2014, 5, 27),
@@ -46,8 +46,8 @@ Router.route('/', {
 					from: new Date(2014, 00, 01),
 					to: new Date(2014, 11, 30)
 				}, function (error, data) {});
-				//graphAllTheData(new Date(2014, 5, 28))
-				graphAllTheData(maxDate);
+				graphAllTheData(new Date(2014, 0, 1))
+					//graphAllTheData(maxDate);
 
 				return {};
 			}
@@ -73,6 +73,7 @@ function graphAllTheData(to) {
 function drawGraph(data) {
 	data = JSON.parse(data);
 
+	$('body>svg').remove();
 	var newData = []
 
 	data.forEach(function (d) {
@@ -274,12 +275,6 @@ function init() {
 	var counter2 = 0;
 	var counterActions = 0;
 
-	$('.bxslider').bxSlider({
-		pager: false,
-		controls: true,
-		infiniteLoop: false
-	});
-
 	$(window).on('scroll', function () {
 		var game = $('#game-intro').offset().top;
 		var parent = $('#identify').offset().top;
@@ -304,8 +299,16 @@ function init() {
         */
 	});
 	console.log($("#go-button"))
-
+	var ehh = 0;
 	$("#go-button").on("click", function () {
+		if (ehh == 0) {
+
+			graphAllTheData(new Date(2014, 0, 12));
+		} else if (ehh == 1) {
+			graphAllTheData(new Date(2014, 0, 28))
+		}
+		ehh++;
+
 		console.log(counter2);
 		if (counter2 == 0) {
 			var txt = $(".line-sep.money span").text();
@@ -352,7 +355,20 @@ function init() {
 
 	var counter = 0;
 	var counter3 = 0;
+	var ehh2 = 0;
 	$("#go-button-2").on("click", function () {
+
+		if (ehh2 == 0) {
+			graphAllTheData(new Date(2014, 4, 22))
+		} else if (ehh2 == 1) {
+			graphAllTheData(new Date(2014, 4, 25))
+		} else if (ehh2 == 2) {
+			graphAllTheData(new Date(2014, 4, 31))
+		}
+
+		ehh2++;
+
+
 		console.log("counter2", counter2);
 		if (counter2 == 4) {
 			$(".line-sep.last-2.hello").addClass("hide");
@@ -383,11 +399,20 @@ function init() {
 		counter2++;
 	});
 
-
+	var ehh3 = 0;
 	$(".action").on("click", function () {
 
 		console.log("yoho");
 
+		if (ehh3 == 0) {
+			graphAllTheData(new Date(2014, 4, 10))
+		} else if (ehh3 == 1) {
+			graphAllTheData(new Date(2014, 4, 31))
+		} else if (ehh3 == 2) {
+			graphAllTheData(new Date(2014, 5, 1))
+		}
+
+		ehh3++;
 		if (counterActions == 0) {
 			if ($(".shareholder").hasClass("hide")) {
 				$(".shareholder").removeClass("hide");
@@ -439,6 +464,11 @@ function init() {
 
 		if ($(this).hasClass("tesco")) {
 			$(".understand-company").removeClass("hide");
+			$('.bxslider').bxSlider({
+				pager: false,
+				controls: true,
+				infiniteLoop: false
+			});
 		}
 
 
