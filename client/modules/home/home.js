@@ -19,7 +19,11 @@ var labels = [{
 }, {
 	date: new Date(2015, 0, 8),
 	message: 'Unprofitable stores closed'
-}]
+}];
+
+
+var XP = 0;
+var level;
 
 Router.route('/', {
 	action: function () {
@@ -444,6 +448,24 @@ function init() {
 
 		counterActions++;
 	});
+}
+
+function showHideModal() {
+	$("#modalOverlay").toggleClass("displayNone");
+}
 
 
+function increaseLvl() {
+	$("#levelNumber").text(Number($("#levelNumber").text()) + 1);
+}
+
+function increaseXP(amount) {
+
+	XP = amount + XP;
+	if (XP >= 100) {
+		XP = 0;
+		increaseLvl();
+	}
+
+	$('body').append('<style>#XPbar:before{width:' + XP + '% !important;}</style>');
 }

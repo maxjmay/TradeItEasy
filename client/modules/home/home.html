@@ -492,30 +492,4 @@
 	<script>
 		$("#tinderslide").jTinder();
 	</script>
-	<script type="text/javascript">
-		function showHideModal() {
-			$("#modalOverlay").toggleClass("displayNone");
-		}
-
-
-
-
-		var XP = 0;
-		var level;
-
-		function increaseLvl() {
-			$("#levelNumber").text(Number($("#levelNumber").text()) + 1);
-		}
-
-		function increaseXP(amount) {
-
-			XP = amount + XP;
-			if (XP >= 100) {
-				XP = 0;
-				increaseLvl();
-			}
-
-			$('head').append('<style>#XPbar:before{width:' + XP + '% !important;}</style>');
-		}
-	</script>
 </template>
