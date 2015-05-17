@@ -43,7 +43,8 @@
                     <span id="XPbar">&nbsp;</span>
                 </div>
                 <div class="nav-item user-money">
-                    <h3>£100,000.00</h3>
+                    <h3>Available: £<span id="available">0.00</span></h3>
+                    <h3>Invested: £<span id="invested">0.00</span></h3>
                 </div>
 
             </div>
@@ -89,7 +90,7 @@ Data here is real, based on the last year of trading. This is an interactive, im
                 <div class="card-block hide purple">
                     <img src="img/safe.png"><h3>Lucky You</h3><h4> 12 January 2014</h4>
                     <p class="card-desc">
-                        You find out your distant relative is actually a Nigerian Prince who wants to reward you for your efforts in getting his money into the UK. Don't worry - he's legit. You receive $100 000, which you decide to invest in shares. What is a share, you ask?
+                        You find out your distant relative is actually a Nigerian Prince who wants to reward you for your efforts in getting his money into the UK. Don't worry - he's legit. You receive £100 000, which you decide to invest in shares. What is a share, you ask?
                     </p>
                 </div>
                 <div class="line-sep hide">
@@ -404,13 +405,12 @@ Data here is real, based on the last year of trading. This is an interactive, im
         function increaseXP(amount) {
             
             XP = amount + XP;
-            if (XP > 100) {
+            if (XP >= 100) {
                 XP = 0;
                 increaseLvl();
             }
-            var XPP = XP+"%";
-//            $("#XPbar").css("width", XPP);
-            $('head').append('<style>#XPbar:before{width:'+XPP+' !important;}</style>');
+
+            $('head').append('<style>#XPbar:before{width:'+XP+'% !important;}</style>');
         }
     </script>
 </body>
