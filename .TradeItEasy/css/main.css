@@ -179,7 +179,7 @@ h3 {
     line-height: 2.8em;
     color: #fff;
 }
-.user-level span{
+#XPbar{
     position: relative;
     display: inline-block;
     width: 120px;
@@ -191,14 +191,14 @@ h3 {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
-.user-level span:before{
+#XPbar:before{
     content: "";
     color: #fff;
     background: #54CBB3;
     position: absolute;
     top: 0;
     left: 0;
-    width: 80%;
+    width: 0%;
     height: 100%;
     display: block;
 

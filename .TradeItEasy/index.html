@@ -39,8 +39,8 @@
                 </div>
                 <div class="nav-item user-level">
                     
-                    <h3>Level 12</h3>
-                    <span>10</span>
+                    <h3>Level <span id="levelNumber">1</span></h3>
+                    <span id="XPbar">&nbsp;</span>
                 </div>
                 <div class="nav-item user-money">
                     <h3>£100,000.00</h3>
@@ -170,7 +170,7 @@ Data here is real, based on the last year of trading. This is an interactive, im
                     </p>
                 </div>
 
-                <div class="line-sep last">
+                <div class="line-sep last" onclick="increaseXP(20)">
                     <span id="go-button" class="go-button">GO</span>
                 </div>
 
@@ -238,8 +238,8 @@ Data here is real, based on the last year of trading. This is an interactive, im
                             </p>
                         </div>
 
-                        <div class="line-sep last-2 hide">
-                            <span id="go-button-2" class="go-button">GO</span>
+                        <div class="line-sep last-2 hide" >
+                            <span id="go-button-2" class="go-button" >GO</span>
                         </div>
 
                         <div class="line-sep decide hide">
@@ -393,5 +393,25 @@ Data here is real, based on the last year of trading. This is an interactive, im
         </footer>
     </div>
     <script>$("#tinderslide").jTinder();</script>
+    <script type="text/javascript">
+        var XP =0;
+        var level;
+        
+        function increaseLvl() {
+            $("#levelNumber").text( Number($("#levelNumber").text()) + 1 );
+        }
+        
+        function increaseXP(amount) {
+            
+            XP = amount + XP;
+            if (XP > 100) {
+                XP = 0;
+                increaseLvl();
+            }
+            var XPP = XP+"%";
+//            $("#XPbar").css("width", XPP);
+            $('head').append('<style>#XPbar:before{width:'+XPP+' !important;}</style>');
+        }
+    </script>
 </body>
 </html>
