@@ -1,4 +1,19 @@
 ////////////////////////////////////
 // Main App Styles /////////////////
 ///////////////////////////////////
+path.domain {
+	display: none;
+}
 
+.area {
+	fill: #A964EF;
+}
+
+body > svg {
+	position: absolute;
+	bottom: 0px;
+}
+
+g.tick text {
+	fill: #A964EF;
+}
