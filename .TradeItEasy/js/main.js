@@ -2,6 +2,7 @@ $(function(){
 	/* vars */
     var counter = 0;
     var counter2 = 0;
+    var counterActions = 0;
     
     $('.bxslider').bxSlider({
         pager: false,
@@ -33,8 +34,24 @@ $(function(){
         */
 	});
 
+    
     $("#go-button").on("click", function(){
-
+        console.log(counter2);
+        if(counter2 == 0){
+            var txt = $(".line-sep.money span").text();
+            $("#available").text(txt);
+        }
+        if(counter2 == 2){
+            if($(".question-container").hasClass("hide")){
+                $(".question-container").removeClass("hide");
+            }
+            
+           
+            $(".line-sep span.go-button").addClass("hide");
+            $(".line-sep.last.hey").addClass("hide");
+            
+        }
+        
         if($($(".card-block.hide").get(counter)).hasClass("hide")){
             $($(".card-block.hide").get(counter)).removeClass("hide");
         }
@@ -58,7 +75,7 @@ $(function(){
             scrollTop: $("#go-button").offset().top
         }, 1500);
 
-
+        counter2++;
         //console.log(counter);
         //console.log(counter2);
     });
@@ -66,6 +83,13 @@ $(function(){
     var counter = 0;
     var counter3 = 0;
     $("#go-button-2").on("click", function(){
+        console.log("counter2", counter2);
+        if(counter2 == 4){
+            $(".line-sep.last-2.hello").addClass("hide");
+            $(".line-sep.decide").removeClass("hide");
+            $(".decision-time").removeClass("hide");
+        }
+        
         if($($(".choice-shareholder").find(".card-block.hide").get(counter)).hasClass("hide")){
             $($(".choice-shareholder").find(".card-block.hide").get(counter)).removeClass("hide");
         }
@@ -86,11 +110,27 @@ $(function(){
         $('html, body').animate({
             scrollTop: $("#go-button-2").offset().top
         }, 1500);
+        counter2++;
      });
 
 
     $(".action").on("click", function(){
+        
         console.log("yoho");
+        
+        if(counterActions == 0){
+            if($(".shareholder").hasClass("hide")){
+                $(".shareholder").removeClass("hide");
+            }
+            
+            $(".card-block.hide.purple.owner").removeClass("hide");
+            //$(".line-sep.last-2").removeClass("hide");
+            $(".line-sep.last-2 .go-button").removeClass("hide");
+            
+            
+            
+        }
+        
         var target = $(this).parent().find(".line-sep");
         if(target.hasClass("hide")){
             target.removeClass("hide");
@@ -136,6 +176,8 @@ $(function(){
         $('html, body').animate({
             scrollTop: $(this).next().offset().top
         }, 1500);
+        
+        counterActions++;
     });
 
 })

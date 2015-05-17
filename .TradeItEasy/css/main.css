@@ -121,57 +121,67 @@ h3 {
 }
 .nav-item{
     display: inline-block;
-    vertical-align: top;
-     margin: 0 2em;
+    vertical-align: middle;
+     margin: 0 1em;
 }
 .nav-item:first-child{
     margin: 0;
 }
 .user-profile img{
     float: left;
-    width: 32px;
-    height: 32px;
+    width: 45px;
+    height: 45px;
     margin-right: 0.5em;
 
-    border-radius: 16px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
 }
 .user-profile .user-stats{
     float: left;
 }
 .user-profile h2{
-    margin: 0;
+    margin: 3px;
     padding: 0;
-    font-size: 1.0em;
+    font-size: 1.2em;
     line-height: 1.0em;
     color: #fff;
 
 }
-.user-profile h3{
+
+.user-stats h3{
+    margin: 3px;
+    padding: 0;
+    font-size: 0.9em;
+    line-height: 1.1em;
+    color: #54CBB3;
+}
+
+.user-level h3{
     margin: 0;
     padding: 0;
     font-size: 1.0em;
     line-height: 1.2em;
     color: #54CBB3;
 }
-.user-level{
-    padding: 0 0.5em;
-    border-left: 1px solid #fff;
+.nav-item.user-level{
+    padding: 0 1em;
+    border: 1px solid #78c1ff;
+    box-shadow: 0px 0px 3px #78c1ff;
 }
 .user-level h3{
     position: relative;
-    top: -3px;
     margin: 0;
+    margin-right: 10px;
+    display: inline-block;
     padding: 0;
     font-size: 1.0em;
-    line-height: 1.0em;
+    line-height: 2.8em;
     color: #fff;
 }
-.user-level span{
+#XPbar{
     position: relative;
-    top: -3px;
-    display: block;
+    display: inline-block;
     width: 120px;
     margin: 0 0 0 0;
     line-height: 1.0em;
@@ -181,14 +191,14 @@ h3 {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
 }
-.user-level span:before{
+#XPbar:before{
     content: "";
     color: #fff;
     background: #54CBB3;
     position: absolute;
     top: 0;
     left: 0;
-    width: 80%;
+    width: 0%;
     height: 100%;
     display: block;
 
@@ -206,11 +216,12 @@ h3 {
     float: right;
 }
 .user-money h3{
-    margin: 0;
+    margin: 10px;
     padding: 0.25em 0 0 0;
     font-size: 1.3em;
     line-height: 1.0em;
     color: #F0EB78;
+    vertical-align: middle;
 }
 
 
@@ -243,11 +254,11 @@ h3 {
 .game-intro{
     position: relative;
     width: 500px;
-    height: 400px;
     margin: -102px auto 0 auto;
     background: #fff;
     border: 1px solid #e1e1e1;
     z-index: 25;
+    padding-bottom:20px;
     /*
     -webkit-box-shadow: 0px 0px 5px 0px #bbb;
     -moz-box-shadow:    0px 0px 5px 0px #bbb;
@@ -375,6 +386,10 @@ h3 {
     -webkit-animation: movespan 1000ms 1 forwards;
     -moz-animation: movespan 1000ms 1 forwards;
 }
+.line-sep.money span{
+    width: auto;
+    right: -72px;
+}
 .line-sep span{
     position: absolute;
     right: -50px;
@@ -402,6 +417,11 @@ h3 {
    width: 64%;
 }
 
+.line-sep.last-2.hello.hide{
+    display: none;
+}
+
+
 .mul-choice .line-sep{
     z-index: 10;
 }
@@ -412,7 +432,9 @@ h3 {
     -moz-animation: none;
     */
 }
-
+.line-sep span.go-button.hide{
+    display: none;
+}
 .line-sep span.go-button{
     display: block;
     right: -36px;
@@ -688,7 +710,9 @@ svg circle{
 }
 
 
-
+.question-container.hide{
+    display: none;
+}
 .shareholder.hide{
     display: none;
 }

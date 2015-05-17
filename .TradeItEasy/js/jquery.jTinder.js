@@ -42,7 +42,7 @@
 
 			container = $(">ul", element);
 			panes = $(">ul>li", element);
-			pane_width = container.width();
+			pane_width = 400;
 			pane_count = panes.length;
 			current_pane = panes.length - 1;
 			$that = this;
