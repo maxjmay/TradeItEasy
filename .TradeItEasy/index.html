@@ -31,18 +31,20 @@
         <header id="header" class="header">
             <div class="sticky-navbar">
                 <div class="nav-item user-profile">
-                    <img src="img/lowpoly.png" alt="">
+                    <img src="img/img_avatar_4.png" alt="">
                     <div class="user-stats">
-                        <h2>LowPolyeanor</h2>
-                        <h3 class="user-type">Jedi</h3>
+                        <h2>LaserLemons</h2>
+                        <h3 class="user-type">Risk Averse</h3>
                     </div>
                 </div>
                 <div class="nav-item user-level">
-                    <h3>Level 12</h3>
-                    <span>10</span>
+
+                    <h3>Level <span id="levelNumber">1</span></h3>
+                    <span id="XPbar">&nbsp;</span>
                 </div>
                 <div class="nav-item user-money">
-                    <h3>£100,000.00</h3>
+                    <h3>Available: £<span id="available">0.00</span></h3>
+                    <h3>Invested: £<span id="invested">0.00</span></h3>
                 </div>
 
             </div>
@@ -60,7 +62,11 @@
                     <h2 class="game-headline">Game Play</h2>
 
                     <p class="card-desc">
-                        How to play & description of play
+                        You are the commander of your fate in this decision-based game. Your choices will affect the path you follow. <br/>Learn the content, analyse the data and make decisions based on what you have learned. By the end of the journey you'll be ready to start trading shares.
+<br/>
+<br/>
+
+Data here is real, based on the last year of trading. This is an interactive, immersive experience for you to figure out what the trading world is all about.
                     </p>
                 </div>
                 <div id="vis" class="svg-stuff">
@@ -84,7 +90,7 @@
                 <div class="card-block hide purple">
                     <img src="img/safe.png"><h3>Lucky You</h3><h4> 12 January 2014</h4>
                     <p class="card-desc">
-                        You find out your distant relative is actually a Nigerian Prince who wants to reward you for your efforts in getting his money into the UK. Don't worry - he's legit. You receive $100 000, which you decide to invest in shares. What is a share, you ask?
+                        You find out your distant relative is actually a Nigerian Prince who wants to reward you for your efforts in getting his money into the UK. Don't worry - he's legit. You receive £100 000, which you decide to invest in shares. What is a share, you ask?
                     </p>
                 </div>
                 <div class="line-sep hide">
@@ -101,6 +107,9 @@
                 </div>
                 <div class="card-block hide yellow">
                     <img src="img/question.png"><h3>Question</h3>
+                    <p class="card-desc">
+                        As a shareholder, do you have control over the daily operations?
+                    </p>
                 </div>
                 <div class="line-sep hide">
                     <span> +10 XP</span>
@@ -162,7 +171,7 @@
                     </p>
                 </div>
 
-                <div class="line-sep last">
+                <div class="line-sep last" onclick="increaseXP(20)">
                     <span id="go-button" class="go-button">GO</span>
                 </div>
 
@@ -230,8 +239,8 @@
                             </p>
                         </div>
 
-                        <div class="line-sep last-2 hide">
-                            <span id="go-button-2" class="go-button">GO</span>
+                        <div class="line-sep last-2 hide" >
+                            <span id="go-button-2" class="go-button" >GO</span>
                         </div>
 
                         <div class="line-sep decide hide">
@@ -385,5 +394,24 @@
         </footer>
     </div>
     <script>$("#tinderslide").jTinder();</script>
+    <script type="text/javascript">
+        var XP =0;
+        var level;
+
+        function increaseLvl() {
+            $("#levelNumber").text( Number($("#levelNumber").text()) + 1 );
+        }
+
+        function increaseXP(amount) {
+
+            XP = amount + XP;
+            if (XP >= 100) {
+                XP = 0;
+                increaseLvl();
+            }
+
+            $('head').append('<style>#XPbar:before{width:'+XP+'% !important;}</style>');
+        }
+    </script>
 </body>
 </html>
