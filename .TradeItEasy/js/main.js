@@ -2,6 +2,13 @@ $(function(){
 	/* vars */
     var counter = 0;
     var counter2 = 0;
+    
+    $('.bxslider').bxSlider({
+        pager: false,
+        controls: true,
+        infiniteLoop: false
+    });
+    
 	$(window).on('scroll', function(){
 		var game = $('#game-intro').offset().top;
         var parent = $('#identify').offset().top;
@@ -45,6 +52,12 @@ $(function(){
             $(".line-sep.fix").addClass("hide");
 
         }
+        
+
+        $('html, body').animate({
+            scrollTop: $("#go-button").offset().top
+        }, 1500);
+
 
         //console.log(counter);
         //console.log(counter2);
@@ -69,6 +82,10 @@ $(function(){
         }
 
         counter3++;
+        
+        $('html, body').animate({
+            scrollTop: $("#go-button-2").offset().top
+        }, 1500);
      });
 
 
@@ -115,6 +132,10 @@ $(function(){
             $(".understand-company").removeClass("hide");
         }
 
+        
+        $('html, body').animate({
+            scrollTop: $(this).next().offset().top
+        }, 1500);
     });
 
 })
