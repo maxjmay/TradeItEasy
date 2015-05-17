@@ -131,6 +131,50 @@ $(function(){
             
         }
         
+        if($(this).hasClass("tesco")){
+            if($(".analyse-tweets").hasClass("hide")){
+                $(".analyse-tweets").removeClass("hide");
+            }
+        }
+        
+        if($(this).attr("id") == "buy"){
+            var counterbuy = 1;
+            console.log("buy");
+            var num = 10000;
+            
+            var amount = $("#available").text().substring(3, $("#available").text().length -1);
+            if(counterbuy == 1){
+                $("#available").text(90000);
+                $("#invested").text(num);
+            }
+            else{
+                $("#available").text(parseInt($("#available").text()) - num);
+                $("#invested").text(parseInt($("#invested").text()) + num);
+            }
+            
+            
+            counterbuy++;
+        }
+        if($(this).attr("id") == "sell"){
+            var countersell = 1;
+            console.log("sell");
+            var num = 10000;
+            
+            
+            var amount = $("#available").text().substring(3, $("#available").text().length -1);
+            if(countersell == 1){
+                $("#available").text(90000);
+                $("#invested").text(num);
+            }
+            else{
+                $("#available").text(parseInt($("#available").text()) - num);
+                $("#invested").text(parseInt($("#invested").text()) + num);
+            }
+            
+            countersell++;
+        }
+        
+        
         var target = $(this).parent().find(".line-sep");
         if(target.hasClass("hide")){
             target.removeClass("hide");

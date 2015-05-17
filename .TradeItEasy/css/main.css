@@ -422,7 +422,9 @@ h3 {
 .line-sep.special-2{
    width: 64%;
 }
-
+.line-sep.decide.tweeet.hide{
+    display: none;
+}
 .line-sep.last-2.hello.hide{
     display: none;
 }
@@ -792,6 +794,9 @@ svg circle{
     display: none;
 }
 .understand-company.hide{
+    display: none;
+}
+.analyse-tweets.hide{
     display: none;
 }
 
